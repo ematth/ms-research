@@ -6,17 +6,30 @@
 
 Help() 
 {
-    # Display Help
-    echo "Performs Lilypond operations on a file."
-    echo
-    echo "Syntax: lilypond.sh (1) (2)"
-    echo "arguments:"
-    echo "(1)   lilypond, "
-    echo "(2)     Print this Help."
-    echo
-    echo "options:"
-    echo "-h    Print this help menu."
-    echo
+# list entries in bin
+arg1list=()
+
+dir=/home/evanmm3/bin
+
+for entry in $dir/*
+do 
+    arg1list+=("${entry#$dir/}") 
+done
+
+# Display Help
+echo "Performs Lilypond operations on a file."
+echo
+echo "Syntax: lilypond.sh [options] <operation> <file>"
+echo
+echo "Operations: "
+printf -v joined '%s,' "${arg1list[@]}"
+echo "${joined%", "}"
+echo
+echo "File: File to perform operation on"
+echo
+echo "options:"
+echo "-h    Print this help menu."
+echo
 }
 
 ########
@@ -30,11 +43,20 @@ while getopts ":h" option; do
             exit;;
         \?) # Invalid option
             echo "Error: Invalid option"
-            exit;;
+            exit 1;;
    esac
 done
 
+shift $((OPTIND - 1))
 
-echo "Compiling $1 with $2..."
-# The magic line :)
-# ../bin/$1 $2;
+if [ "$#" -ne 2 ]; then
+    echo "Error: Missing arguments"
+    exit 1
+fi
+
+operation=$1
+file=$2
+
+echo "Compiling $file with $operation..."
+
+/home/evanmm3/bin/$operation $file 
