@@ -1,4 +1,6 @@
+# remove this folder as some point
 /samples/
+# python virtual environment
 /venv/
-/maestro/
-/cantabile/
+# outputs from lilypond conversion scripts
+/outputs/
