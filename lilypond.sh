@@ -7,14 +7,14 @@
 Help() 
 {
 # list entries in bin
-arg1list=()
+# arg1list=()
 
-dir=/home/evanmm3/bin
+# dir=/home/evanmm3/bin
 
-for entry in $dir/*
-do 
-    arg1list+=("${entry#$dir/}") 
-done
+# for entry in $dir/*
+# do 
+#     arg1list+=("${entry#$dir/}") 
+# done
 
 # Display Help
 echo "Performs Lilypond operations on a file."
@@ -22,8 +22,8 @@ echo
 echo "Syntax: lilypond.sh [options] <operation> <file>"
 echo
 echo "Operations: "
-printf -v joined '%s,' "${arg1list[@]}"
-echo "${joined%", "}"
+# printf -v joined '%s,' "${arg1list[@]}"
+# echo "${joined%", "}"
 echo
 echo "File: File to perform operation on"
 echo
