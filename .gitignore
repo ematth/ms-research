@@ -1,5 +1,3 @@
-# remove this folder as some point
-/samples/
 # python virtual environment
 /venv/
 # outputs from lilypond conversion scripts
