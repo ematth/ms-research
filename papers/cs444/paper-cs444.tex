@@ -12,21 +12,7 @@
 
 \begin{document}
 
-\title[Bayesian]{Bayesian Grading: Analysis of Scores in the Context of Cheating}
-\author{Victor Zhao}
-\email{chenyan4@illinois.edu}
-%\orcid{1234-5678-9012}
-\affiliation{%
-	\institution{University of Illinois Urbana-Champaign}
-	\country{}
-}
-\author{Yuxuan Chen}
-\email{yuxuan19@illinois.edu}
-%\orcid{1234-5678-9012}
-\affiliation{%
-	\institution{University of Illinois Urbana-Champaign}
-	\country{}
-}
+\title[omr-lilypond-midi]{Optical Music Recognition for MIDI-LilyPond File Generation}
 \author{Evan Matthews}
 \email{evanmm3@illinois.edu}
 %\orcid{1234-5678-9012}
@@ -44,91 +30,32 @@
 \section{Introduction}
 \todo{Introduction}
 
-Something about automated assessments and testing, resource limitations, unproctoring~\cite{gulati2024regimens}, untrustable grades, and our problem. 
+In the world of music or audio transcription/arrangement, the complexity of sound and score data has allowed human performance to remain the current state-of-the-art. Several factors contribute to this circumstance: the number of potential audio and score file types, ambiguity on how performance qualities are notated, and overall inconsistencies between recordings and their respective scores. Machine learning models, in turn, have been a crucial step towards reducing these inconsistencies. Their ability to learn the nonlinearities and artistic qualities that otherwise plague audio computation have allowed for noteworthy advancements such as the WaveNet\cite{oord2016wavenet}. The remaining issue in the process of sound generation is the amount of data available to train with. Worthwhile audio data remains difficult to collect due to its large size and potential copyright issues. In particular, trying to condition off another medium is incredibly difficult as current datasets lack the correlations necessary to streamline the audio transcription process. Datasets such as MAESTRO are close to ideal results, but some intermediate steps are needed to learn correlations between audio files and musical scores.
+
+With the following conditions in mind, I propose an Image-to-MIDI model to serve a few purposes. First, this model will serve to convert image data to relative musical data to a high degree of accuracy. The process of converting MIDI to an image is trivial, but the opposite is a known Optical Music Recognition (OMR) problem in that the correlation is nonexistent. Second, a highly reliable model of this type will be capable of serving as an intermediate step in future audio computation endeavors, as the nontrivial nature of OMR is a barrier for reliable model training between scores and other types of audio data. Finally, a conversion of this type allows for more flexible datasets because MIDI can be converted into a number of other audio file types.
+
+From a technical standpoint, my project will consist of: the construction of a trained model to relate images to MIDI data, a paper describing the process of constructing the model, and any notable results and accuracies, and a few demos from which the accuracy of the model can also be visually confirmed. The model will generally reference existing OMR research and will serve as an attempt to construct a completely new CNN model, (not be an implementation of an existing paper). Existing MIDI datasets have been narrowed down to strictly two-stave piano works by Johann Sebastian Bach to maintain rhythmic and compositional uniformity, although a generalized model for various instruments and number of staves can theoretically be produced given a large enough dataset.
+
+Along with serving as my four-credit-hour project for the course, this model will serve as a supplementary step in my MS thesis- a separately-proposed model for generating audio conditioned on sheet music, advised by Paris Smaragdis. I can confirm that neither project will trivialize the other, and the flexibility of this project will open the door for other interesting ML-audio research in the future. For further results, I may pursue auto-transcription with this model to further differentiate from my planned thesis.
+
 
 \section{Background}
-\subsection{Computer-Based Assessments}
-% Autograded problems, automated item generation, everything enabling the use of computer-based testing. Asynchronous testing
+\subsection{Optical Music Recognition}
+\todo{OMR background}
 
-In recent classroom settings, computer-based assessments has been observed to have many advantages over the traditional paper-based assessments~\cite{chen2019generation}. 
-One property of computer-based assessments is the ability to autograde students' work and provide instant feedback. A large body of research has shown that providing feedback in time can be beneficial to student learning~\cite{anderson1995cognitive}. 
-In formative contexts, the ability to autograde problems and provide instant feedback also enables a mastery approach in courses~\cite{west2015prairielearn}. 
-With computer-based assessments, students also have the power to work on problems and submit their work asynchronously, enabling more flexibility in classrooms~\cite{zhao2023flexibility}. 
-Automatic Item Generation~\cite{chen2019generation} allows computers to generate problems that are similar to each other based on item models, providing a large problem pool students can practice with. 
-The combination of Automatic Item Generation and autograding also allows for more courses to be offered at scale through online open assessment platforms, as the number of course enrollments increase significantly in recent years~\cite{silva2020measuring}. 
-New technologies in development such as Automatic Short Answer Grading~\cite{bonthu2021automated} are expanding the use for computer-based assessments to more types of problems. These features can enable computer-based assessments in almost any discipline. 
-
-\subsection{Computer-Based Testing}
-% CBTF, frequent testing, lack of resources, some unproctoring, cheating
-
-Computer-based assessments can be used in summative testing contexts as well. Dishonesty is usually a large factor of the effectiveness of summative assessments~\cite{arnold2016cheating}. 
-Compared to the traditional pen and paper exams, students have more control over the environment in which they are taking the exam, but plagiarism and cheating prevention can also be more challenging because students can potentially have more resources (legal or illegal) available to them~\cite{kurniawan2020byod}. 
-Some of the initial proctoring methods is to 
-Proctoring the exams at a large scale poses a lot of logistical problems such as the trouble students need to go through to setup a testing environment using lockdown browsers or other similar technologies~\cite{kurniawan2020byod}, and the difficulty in conducting frequent testing for classes and dealing with accomodations or conflict exams~\cite{zilles2015cbtf}. 
-Training the course staff to be responsible proctors could also be time-consuming. 
-
-One solution proposed by researchers is to have a dedicated computer laboratory specifically for computer-based testing. 
-This method was adopted and used to build the Computer-Based Testing Facility (CBTF) at the University of Illinois Urbana-Champaign, which has been utilized for an extended period of time~\cite{zilles2015cbtf}. 
-The CBTF was built in a laboratory using computers configured for testing environments and hiring highly-trained proctors. 
-This method has shown to be reasonable in terms of cost~\cite{zilles2015cbtf}, and also effective in preventing cheating on a large scale~\cite{silva2020measuring}. 
-
-However, with more classes incorporating computer-based assessments and computer-based testing, there might not be enough resources to have all exams proctored through the CBTF~\cite{mcmahon2022lessons}. 
-
-\subsection{Bayesian?}
+\subsection{Lilypond, MIDI}
 
 \section{Experiment}
-\subsection{Context}
-The data for this study was drawn from a lower-division undergraduate computer science (CS) course over two semesters: Fall 2021 and Fall 2023.
-Students were expected to have completed an introductory algebra course as a prerequisite prior to taking this course.
-The course included 4 unproctored quizzes, 3 proctored exams, and 1 comprehensive proctored final exam.
-Each quiz and exam had a duration of 50 minutes, except for the longer, cumulative final exam.
-The quizzes were given one week before the exams and had overlapping content, allowing exams to serve as a rough mirrored comparison to the quiz just before the exam.
-Students took the proctored exams within the CBTF. % synchronously or asynchronously?
-We gathered exam records for the 695 students enrolled in Fall 2021 and the 423 students enrolled in Fall 2023.
-After excluding students with test accommodations or those who didn't complete all the exams or quizzes, the final dataset included 622 student records from Fall 2021 and 405 student records from Fall 2023.
-
-\subsection{Method}
-Our proposed method analyzes student scores through policy simulation of computed Bayesian probabilities.
-First, probabilities of student scores are computed with respect to their observed ability \(\mu\in \{0, 1, ..., 100\}\) and cheating boolean
-\(c \in \{0, 1\}\) where \((c = 0), (c = 1)\) indicate not cheating and cheating, respectively. These parameters are used to compute
-\begin{equation}
-P(\text{obs} \mid \mu, c) = \frac{1}{N}\exp\bigg(-\frac{1}{2}\sum_{i=1}^{n} \left( \frac{a_i - \mu - \chi c}{\sigma} \right)^{2} \bigg)
-\end{equation}
-where \(a_i\) is the \(i\)th assessment of a student with parameters \((\mu, c)\), \(\sigma\) is the standard deviation of a student's assessments, and \(\chi\) is a nonnegative "penalty" applied
-when a student has cheated. In order to distribute our data across student ability and/or cheating booleans, we use Bayes' Theorem to invert the relationship
-of our computed probabilities:
-\begin{equation}
-	P(\mu, c \mid \text{obs}) = \frac{P(\text{obs}\mid (\mu, c)) \cdot P(\mu, c)}{\sum_{\mu', c'}P(\text{obs} \mid \mu', c')}
-\end{equation}
-where \(P(\mu, c)\) is the probability of a student's performance amongst their class \footnote[1]{A uniform distribution of student performances can also be used here.}, 
-and our probability is normalized by the sum of previously computed probabilities \(P(\text{obs}\mid \mu, c)\). The follow computations returns a
-probability array of shape \((mu, c)\) from which we can visualize the distributions of cheating and non-cheating students.
-
-finally, we define a policy \(\pi_\theta(p)\) for simulating random variable \(S = (\mu, c)\) and testing whether the correct outcome was returned:
-\begin{equation}
-	\pi_\theta(p) = 
-	\begin{cases}
-		0 & p \le \theta\\
-		1 & p > \theta 
-	\end{cases}
-\end{equation}
-The result of performing this simulation \(m\) times is a \(2\times 2\) truth table indicating percentages of true and false outcomes of cheating and non-cheating for the data.
-\subsection{Analysis}
+\subsection{Key resources}
+The Image-to-MIDI convolutional neural network will be built from scratch while referencing promising results from OMR and image-to-text research, (should the CNN need fine-tuning or other enhancement). Currently, the model dataset is the complete Bach Midi Index and will be narrowed down to fit additional constraints: two staves, single instrument, rhythmic quantization at the 16th or 32nd- note level. Model testing will focus primarily on self-trained work, but I am interested in comparing against pre-trained models if I have extra time. For hardware, training will take place on a Linux GPU cluster, courtesy of Paris Smaragdis and the UIUC-CS Audio Computing Lab. Programming work is using a combination of Python with Pytorch for the CNN, and Bash scripts with Lilypond to prepare and normalize the dataset.
 
 \section{Results}
 
 \section{Discussion}
-\subsection{Limitations}
-While existing datasets of student assessments confirm the viability of Bayesian analysis, such information greatly reduces the extent to which
-the statistics can be considered trustworthy. In particular, our aforementioned analysis relies on the data being summative and free of
-statistically significant cheating attempts. Bayesian analysis on formative assessments is entirely possible, but the computation time drastically
-increases with respect to the context for which the analysis is performed. A weekly topic-by-topic basis is likely to provide more results with finer
-details given enough time, but two to three summative assessments can return similar results by individual problems while significantly decreasing
-computation time. Additional cheating attempts can also reduce the initial trustworthiness of scores and diminish Bayesian analysis's effectiveness.
-As such, our results appear highly volatile or inconclusive without a subset of reasonable scores for analysis. 
+\todo{discussion}
 
 \section{Conclusions}
-
+\todo{conclusions}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
