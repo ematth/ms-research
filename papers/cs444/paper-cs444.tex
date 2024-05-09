@@ -63,8 +63,10 @@ Each format provides benefits and drawbacks towards generalized OMR, but combine
 Second, current research continues to limit its effective musical scope: constant genre, time period composed, single vs. multi-line pieces, and single vs. multiple measures, to name a few.
 These limitations are to be expected as a means of balancing experiment accuracy with the subset of musical notation to be recognized. 
 However, no paper to date has intended to capture a high accuracy while completely generalizing the space of recognizable music.
+
 Finally, the state-of-the-art for machine-learning-based OMR lies in the implementation of Convolutional Recurrent Neural Networks (CRNN). 
-This model type is preferred over CNN for its ability to learn data as order-dependent sequences- a crucial philosophy in parsing and understanding musical scores in general.
+This model type is preferred over CNN for its ability to learn data as order-dependent sequences- a crucial philosophy in parsing and understanding musical scores in general. 
+However, it should be noted that CNNs are still viable for their non-order-dependent musical problems, such as Nugroho and Zahra's work on individual note and duration recognition ~\cite{nugroho_zahra_2024}.
 
 \subsection{Research Questions}
 
@@ -95,53 +97,56 @@ At the document level, aspects of a score that stay mostly or completely constan
 For example, the number of voices/instruments and respective number of staves are initialized with the $\backslash{Voice}$ and $\backslash{context}$ commands,
 while high-level musical information is initialized by commands such as $\backslash{time}$ for time signature, $\backslash{key}$ for key signature, and $\backslash{tempo}$ for performance speed in beats per minute.  
 
-\begin{figure}
-	\begin{subfigure}
-		\centering
-		\includegraphics[width = .8\linewidth]{./figures/lilypond-snippet.png}
-		% \caption{Rendered Lilypond (.ily) file with code}
-		\label{fig:lilypond-snippet}
-	\end{subfigure}
-	~
-	\begin{subfigure}
-		\centering
-		\includegraphics[width = .8\linewidth]{./figures/lilypond-code.png}
-		\label{fig:lilypond-code}
-	\end{subfigure}
-	\caption{Lilypond (.ly) code and rendering, (time signature = 4/4)}
-	\label{fig:lilypond-example}
-\end{figure}
-
 At the music level, rhythmic musical symbols are notated according to their pitches and relative time duration.
 pitches are all characters ${a, b, c, d, e, f, g, r}$, where $r$ is a "rest" meaning no pitch occurs.
 To ascend or descend in pitch beyond a single musical "octave," the $'$ and $,$ characters are appended to indicate one or more octave ascendings or descendings, respectively.
 Pitches are also proceeded by a rhythmic value representing its duration in time.
 These values are typically powers of two, (but can technically be any positive floating-point value), and they dictate how long a pitch is played with respect to the piece's time signature.
 For example, a score with time signature = 2/4 indicates that each measure has two beats, and each beat is the length of a quarter note (hard-coded in the denominator).
-In this case, the line $"c4 d4"$ would represent two quarter (4) notes or a single measure in the provided time signature.
+In this case, the line $"c4 \quad d4"$ would represent two quarter (4) notes or a single measure in the provided time signature.
 Additionally, notes without defined durational values take on the previous note's duration in a line, so a series of equal-duration notes is represented by one durational value.
 Finally, separations between measures are made with $"| \% n"$, marking the end of measure $n$.
-Figure~\ref{fig:lilypond-example} compares the rendering of a single staff of music with its relative Lilypond notation .
+Figure~\ref{fig:lilypond-example} compares the rendering of a single staff of music with its relative Lilypond notation.
+\footnote{The time signature $C$ or "common-time" is another common way of writing 4/4.}
 
-% \begin{lstlisting}
-% trackBchannelB = \relative c {
-% 	r16 c' d e f d e c g'8 c b32 a b16 c8 
-% 	| % 2
-% 	d16 g, a b c a b g d'8 g f32 e f16 g8 
-% 	| % 3
-% }
-% \end{lstlisting}
-
+\begin{figure}
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/lilypond-snippet.png}
+	\end{subfigure}
+	~
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/lilypond-code.png}
+	\end{subfigure}
+	\caption{Lilypond (.ly) code and rendering}
+	\label{fig:lilypond-example}
+\end{figure}
 
 \section{Experiment}
 
 \subsection{CRNN Model}
 \todo{CRNN model}
-The model in question 
+The proposed Image-to-MIDI model is a toy implementation of Shi, et al.'s pioneering work in CRNNs~\cite{shi2015endtoend}.
 
 \subsection{Data Specfications}
 \todo{dataset specifics}
-Existing MIDI datasets have been narrowed down to strictly two-stave piano works by Johann Sebastian Bach to maintain rhythmic and compositional uniformity, although a generalized model for various instruments and number of staves can theoretically be produced given a large enough dataset.
+MIDI data used for this experiment has been narrowed down to strictly two-stave piano "inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
+These works maintain relatively similar quantization schemes (rhythms and durations of notes), are short, and have several clear transcriptions for research, education, and entertainment purposes.
+
+\begin{figure}
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/invent8.png}
+	\end{subfigure}
+	~
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/invent4.png}
+	\end{subfigure}
+	\caption{Excerpt of Invention No.4; cropped/prepared rendering of Invention No.8.}
+	\label{fig:bach-example}
+\end{figure}
 
 \section{Results}
 
