@@ -12,7 +12,7 @@
 
 \begin{document}
 
-\title[omr-lilypond-midi]{Optical Music Recognition for LilyPond File Generation}
+\title[omr-lilypond-midi]{Optical Music Recognition for Homophonic LilyPond File Generation}
 \author{Evan Matthews}
 \email{evanmm3@illinois.edu}
 %\orcid{1234-5678-9012}
@@ -28,16 +28,53 @@
 \maketitle
 
 \section{Introduction}
-\todo{Introduction}
-\cite{oord2016wavenet,contreras2023omrcnn,contreras2023omrpiano,mayer2024practical,andrea2021note}
+\subsection{Initial Proposal}
+\todo{Introduction citations}
+\cite{contreras2023omrcnn,,andrea2021note}
 
-In the world of music or audio transcription/arrangement, the complexity of sound and score data has allowed human performance to remain the current state-of-the-art. Several factors contribute to this circumstance: the number of potential audio and score file types, ambiguity on how performance qualities are notated, and overall inconsistencies between recordings and their respective scores. Machine learning models, in turn, have been a crucial step towards reducing these inconsistencies. Their ability to learn the nonlinearities and artistic qualities that otherwise plague audio computation have allowed for noteworthy advancements such as the WaveNet~\cite{oord2016wavenet}. The remaining issue in the process of sound generation is the amount of data available to train with. Worthwhile audio data remains difficult to collect due to its large size and potential copyright issues. In particular, trying to condition off another medium is incredibly difficult as current datasets lack the correlations necessary to streamline the audio transcription process. Datasets such as MAESTRO are close to ideal results, but some intermediate steps are needed to learn correlations between audio files and musical scores.
+In the world of music or audio transcription/arrangement, the complexity of sound and score data has allowed human performance to remain the current state-of-the-art. 
+Several factors contribute to this circumstance: the number of potential audio and score file types, ambiguity on how performance qualities are notated, and overall inconsistencies between recordings and their respective scores. 
+Machine learning models, in turn, have been a crucial step towards reducing these inconsistencies. 
+Their ability to learn the nonlinearities and artistic qualities that otherwise plague audio computation have allowed for noteworthy advancements such as the WaveNet~\cite{oord2016wavenet}. 
+The remaining issue in the process of sound generation is the amount of data available to train with. 
+Worthwhile audio data remains difficult to collect due to its large size and potential copyright issues. 
+In particular, trying to condition off another medium is incredibly difficult as current datasets lack the correlations necessary to streamline the audio transcription process. 
+Datasets such as MAESTRO ~\cite{hawthorne2018enabling} are close to ideal results, but some intermediate steps are needed to learn correlations between audio files and musical scores.
 
 With the following conditions in mind, I propose an Image-to-MIDI model to serve a few purposes. First, this model serves to convert image data to relative musical data to a high degree of accuracy. The process of converting MIDI to an image is trivial, but the opposite is a known Optical Music Recognition (OMR) problem in that the correlation is nonexistent. 
 Second, a highly reliable model of this type is capable of serving as an intermediate step in future audio computation endeavors, as the nontrivial nature of OMR is a barrier for reliable model training between scores and other types of audio data. 
 Finally, a conversion of this type allows for more flexible datasets because MIDI can be converted into a number of other audio file types.
 
-This model generally references existing OMR research and serves as an attempt to construct a completely new CNN model. Existing MIDI datasets have been narrowed down to strictly two-stave piano works by Johann Sebastian Bach to maintain rhythmic and compositional uniformity, although a generalized model for various instruments and number of staves can theoretically be produced given a large enough dataset.
+\subsection{Known Limitations}
+
+Given the vast complexity of western music notation and intricacies in notation/time alignment, the proposed model has a pessimistic approach. 
+That is, given a small subset of musical data (\textit{among all notated music}) and some model, results can be expected to only match expected outputs through one or more of: pitch, rhythm, duration, and overall formatting.
+Existing research in OMR supports these expectations. First, several digital notation systems exist for music, including: 
+
+\begin{itemize}
+	\item Standards like \textit{MusicXML}, \textit{Lilypond} and \textit{MIDI},
+	\item Software-specific formats from \textit{Musescore}, \textit{Sibelius} and \textit{Finale},
+	\item \textit{KERN} from the Humdrum tool-set ~\cite{contreras2023omrpian},
+	\item Mayer, et al.'s \textit{Linearized MusicXML} ~\cite{mayer2024practical}, and
+	\item Contreras, et al.'s untitled "end-to-end OMR" encoding language ~\cite{contreras2023omrcnn}.
+\end{itemize} 
+
+Each format provides benefits and drawbacks towards generalized OMR, but combined research efforts have yet to hone in on a particular format.
+Second, current research continues to limit its effective musical scope: constant genre, time period composed, single vs. multi-line pieces, and single vs. multiple measures, to name a few.
+These limitations are to be expected as a means of balancing experiment accuracy with the subset of musical notation to be recognized. 
+However, no paper to date has intended to capture a high accuracy while completely generalizing the space of recognizable music.
+Finally, the state-of-the-art for machine-learning-based OMR lies in the implementation of Convolutional Recurrent Neural Networks (CRNN). 
+This model type is preferred over CNN for its ability to learn data as order-dependent sequences- a crucial philosophy in parsing and understanding musical scores in general.
+
+\subsection{Research Questions}
+
+Despite low research expectations, I believe that a few questions can be posed and answered for the purpose of bounding requirements on a larger, all-encompassing Image-to-MIDI model:
+
+\begin{itemize}
+	\item [\textbf{RQ1}] What forms of recognition can be expected from a generalized CRNN implementation?
+	\item [\textbf{RQ2}] How does Lilypond recognition compare against other standard and custom formats?
+	\item [\textbf{RQ3}] What conflicts currently prevent state-of-the-art models from further generalization?
+\end{itemize}
 
 
 \section{Background}
@@ -58,7 +95,7 @@ At the document level, aspects of a score that stay mostly or completely constan
 For example, the number of voices/instruments and respective number of staves are initialized with the $\backslash{Voice}$ and $\backslash{context}$ commands,
 while high-level musical information is initialized by commands such as $\backslash{time}$ for time signature, $\backslash{key}$ for key signature, and $\backslash{tempo}$ for performance speed in beats per minute.  
 
-\begin{figure*}
+\begin{figure}
 	\begin{subfigure}
 		\centering
 		\includegraphics[width = .8\linewidth]{./figures/lilypond-snippet.png}
@@ -71,9 +108,9 @@ while high-level musical information is initialized by commands such as $\backsl
 		\includegraphics[width = .8\linewidth]{./figures/lilypond-code.png}
 		\label{fig:lilypond-code}
 	\end{subfigure}
-	\caption{Lilypond (.ily) code and rendering, (time signature = 4/4)}
+	\caption{Lilypond (.ly) code and rendering, (time signature = 4/4)}
 	\label{fig:lilypond-example}
-\end{figure*}
+\end{figure}
 
 At the music level, rhythmic musical symbols are notated according to their pitches and relative time duration.
 pitches are all characters ${a, b, c, d, e, f, g, r}$, where $r$ is a "rest" meaning no pitch occurs.
@@ -97,15 +134,14 @@ Figure~\ref{fig:lilypond-example} compares the rendering of a single staff of mu
 
 
 \section{Experiment}
-\subsection{Key resources}
-\todo{Remove this section?}
-The Image-to-MIDI convolutional neural network will be built from scratch while referencing promising results from OMR and image-to-text research, (should the CNN need fine-tuning or other enhancement). Currently, the model dataset is the complete Bach Midi Index and will be narrowed down to fit additional constraints: two staves, single instrument, rhythmic quantization at the 16th or 32nd- note level. Model testing will focus primarily on self-trained work, but I am interested in comparing against pre-trained models if I have extra time. For hardware, training will take place on a Linux GPU cluster, courtesy of Paris Smaragdis and the UIUC-CS Audio Computing Lab. Programming work is using a combination of Python with Pytorch for the CNN, and Bash scripts with Lilypond to prepare and normalize the dataset.
-
-\subsection{Dynamic quantization}
-\todo{quantization stuff}
 
 \subsection{CRNN Model}
 \todo{CRNN model}
+The model in question 
+
+\subsection{Data Specfications}
+\todo{dataset specifics}
+Existing MIDI datasets have been narrowed down to strictly two-stave piano works by Johann Sebastian Bach to maintain rhythmic and compositional uniformity, although a generalized model for various instruments and number of staves can theoretically be produced given a large enough dataset.
 
 \section{Results}
 
