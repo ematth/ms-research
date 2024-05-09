@@ -54,7 +54,9 @@ This notation language consists of multiple layers to separate score components:
 		\item \textbf{Music level:} components related to low-level musical details, (notes, rhythms, durations, key/time signatures, tempo).
 \end{itemize}
 
-At the document level, \todo{document}
+At the document level, aspects of a score that stay mostly or completely constant throughout a piece are indicated by specific, indent-sensitive keywords.
+For example, the number of voices/instruments and respective number of staves are initialized with the $\backslash{Voice}$ and $\backslash{context}$ commands,
+while high-level musical information is initialized by commands such as $\backslash{time}$ for time signature, $\backslash{key}$ for key signature, and $\backslash{tempo}$ for performance speed in beats per minute.  
 
 \begin{figure*}
 	\begin{subfigure}
