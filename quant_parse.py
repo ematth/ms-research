@@ -34,6 +34,6 @@ def quant_parse(num: int = 1, path: str = './bach/invent/invent') -> int:
     return max_quant * numerator * int(denominator / 4)
 
 
-if __name__ == '__main__':
-    q = quant_parse(1)
-    print(q)
+# if __name__ == '__main__':
+#     q = quant_parse(1)
+#     print(q)
