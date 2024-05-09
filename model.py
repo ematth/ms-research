@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from torchvision.models import resnet18, ResNet18_Weights
+# from torchvision.models import resnet18, ResNet18_Weights
 from torch import Tensor
 
 
@@ -30,5 +30,24 @@ class CRNN_Network(torch.nn.Module):
         # Transcription
         self.dense = nn.Linear()
 
-    def forward(input):
-        input = 6
+        self.layers = nn.Sequential(
+            self.conv1,
+            self.pool1,
+            self.conv2,
+            self.pool2,
+            self.conv3,
+            self.conv4,
+            self.pool3,
+            self.conv5,
+            self.batch_norm1,
+            self.conv6,
+            self.batch_norm2,
+            self.pool4,
+            self.conv7,
+            self.lstm1,
+            self.lstm2,
+            self.dense
+        )
+
+    def forward(self, input):
+        return self.layers(input)
