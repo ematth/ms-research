@@ -19,14 +19,14 @@ class CRNN_Network(torch.nn.Module):
         self.conv4 = nn.Conv2d(in_channels=256, out_channels=256, kernel_size=(3,3), stride=1, padding=1, bias=False)
         self.pool3 = nn.MaxPool2d(kernel_size=(1,2), stride=2)
         self.conv5 = nn.Conv2d(in_channels=256, out_channels=512, kernel_size=(3,3), stride=1, padding=1, bias=False)
-        self.batch_norm1 = nn.BatchNorm2d()
+        self.batch_norm1 = nn.BatchNorm2d(num_features=512)
         self.conv6 = nn.Conv2d(in_channels=512, out_channels=512, kernel_size=(3,3), stride=1, padding=1, bias=False)
-        self.batch_norm2 = nn.BatchNorm2d()
+        self.batch_norm2 = nn.BatchNorm2d(num_features=512)
         self.pool4 = nn.MaxPool2d(kernel_size=(1,2), stride=2)
-        self.conv7 = nn.Conv2d(in_channels=512, out_channels=512, kernel_size=(2,2), stride=1, padding=0, bias=False)
+        self.conv7 = nn.Conv2d(in_channels=512, out_channels=256, kernel_size=(2,2), stride=1, padding=0, bias=False)
         # Map to sequence
-        self.lstm1 = nn.LSTM(hidden_size=256, bidirectional=True)
-        self.lstm2 = nn.LSTM(hidden_size=256, bidirectional=True)
+        self.lstm1 = nn.LSTM(input_size=256, hidden_size=256, bidirectional=True)
+        self.lstm2 = nn.LSTM(input_size=256, hidden_size=256, bidirectional=True)
         # Transcription
         self.dense = nn.Linear(in_features=256, out_features=256)
 
