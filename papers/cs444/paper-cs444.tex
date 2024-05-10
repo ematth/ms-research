@@ -54,23 +54,11 @@
 
 \title[omr-lilypond-midi]{Optical Music Recognition for LilyPond File Generation}
 \author{Evan Matthews}
-% \email{evanmm3@illinois.edu}
-% %\orcid{1234-5678-9012}
-% \affiliation{%
-% 	\institution{University of Illinois Urbana-Champaign}
-% 	\country{}
-% }
-
-% \begin{abstract}
-% \todo{Abstract}
-% \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 \subsection{Initial Proposal}
-\todo{Introduction citations}
-\cite{andrea2021note}
 
 In the world of music or audio transcription/arrangement, the complexity of sound and score data has allowed human performance to remain the current state-of-the-art. 
 Several factors contribute to this circumstance: the number of potential audio and score file types, ambiguity on how performance qualities are notated, and overall inconsistencies between recordings and their respective scores. 
@@ -114,7 +102,7 @@ Despite low research expectations, I believe that a few questions can be posed a
 
 \begin{itemize}
 	\item [\textbf{RQ1}] What forms of recognition can be expected from a generalized CRNN implementation?
-	\item [\textbf{RQ2}] How does Lilypond recognition compare against other standard and custom formats?
+	\item [\textbf{RQ2}] How does Lilypond recognition compare against other standard and custom music formats?
 	\item [\textbf{RQ3}] What conflicts currently prevent state-of-the-art models from further generalization?
 \end{itemize}
 
@@ -246,7 +234,7 @@ In order to prevent drastic shifts due to quantization, an optimal quantization 
 		\centering
 		\includegraphics[width = .8\linewidth]{./figures/c32.png}
 	\end{subfigure}
-	\caption{Levels of Quantization $[2^0, 2^5]$ in Rendering}
+	\caption{Levels of Quantization $Q = [1, 32]$ in Rendering}
 	\label{fig:quantization}
 \end{figure}
 
@@ -263,16 +251,30 @@ Additionally, possible $\hat Q$ are limited to powers of 2 greater than 0 in ord
 
 \section{Discussion}
 
-The following section details my analysis with respect to previously discussed research questions.
+The following section details my analysis with respect to the previously mentioned research questions (\textbf{RQ1-3}).
 
 \subsection{Model Generalization (RQ1)}
+Given that resulting text output consisted of 
 
 \subsection{Format Comparison (RQ2)}
+Lilypond is not, by all means, a perfect music formatting language. 
+Being a format focused on the visual clarity of musical notation, I find that the aforementioned "document level" greatly hinders Lilypond from achieving basic recognition.
+In particular, additional keywords for the representation and position of solely visual elements of a score, 
+along with their necessary language features like brackets and spacers, strongly inhibit basic CRNN models from making noticeable music generalizations.
+
 
 \subsection{Model Criticism (RQ3)}
+My CRNN implementation, along with the CRNN model for which my research references, are not without barriers preventing consistent musical generalization.
+In staying consistent with my description of the Lilypond language, my critiques against CRNNs are categorized by what should exist in order for music-level and document-level generalizations to occur.
+
+\subsubsection{Music-level Generalization}
+
+
+\subsubsection{Document-level Generalization}
 
 \section{Conclusions}
 \todo{conclusions}
+Overall, despite low expectations for workable data, the following experiment and results proved to be quite beneficial in testing the Lilypond format.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references-cs444}
