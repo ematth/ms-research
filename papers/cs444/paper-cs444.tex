@@ -17,7 +17,7 @@
         \vspace*{1cm}
             
         \Huge
-        \textbf{Optical Music Recognition for Homophonic LilyPond File Generation}
+        \textbf{Optical Music Recognition for LilyPond File Generation}
             
         \vspace{0.5cm}
         \LARGE
@@ -30,7 +30,9 @@
 		\textbf{Executive Summary}
 
 		\vspace{0.5cm}
-		abstract goes here...
+		This report explores the feasibility of Lilypond as a digital music format in the process of optical music recognition and translation for full scores.
+		A simple Convolutional Recurrent Neural Network (CRNN) implementation was trained on Inventions by Johann Sebastian Bach, and test outputs of other Bach works were analyzed for generalization in the Lilypond format.
+		Overall, \todo{results} 
 
 		\begin{figure}
 			\centering
@@ -50,7 +52,7 @@
     \end{center}
 \end{titlepage}
 
-\title[omr-lilypond-midi]{Optical Music Recognition for Homophonic LilyPond File Generation}
+\title[omr-lilypond-midi]{Optical Music Recognition for LilyPond File Generation}
 \author{Evan Matthews}
 % \email{evanmm3@illinois.edu}
 % %\orcid{1234-5678-9012}
@@ -180,7 +182,7 @@ The proposed Image-to-MIDI model is a smaller model referencing Shi, et al.'s pi
 The model itself consists of multiple two-dimensional Convolutional/MaxPooling pairs for the purpose of extracting features from the intial score images.
 Batch normalization layers are also applied to refine data recovered from the feature extraction.
 Lastly, features are pushed through two bidirectional LSTM layers- the recurrent layers of the model- for data prediction with respect to "sequences" of the images.
-In this case, sequences of the image data are the pixel columns of $(595 \times H)$ images, where $H$ is the height of the image dependent on the overall "length" of the music.
+In this case, sequences of the image data are the pixel columns of \todo{595?} $(595 \times H)$ images, where $H$ is the height of the image dependent on the overall "length" of the music.
 
 \begin{figure}
 	\centering
@@ -191,8 +193,17 @@ In this case, sequences of the image data are the pixel columns of $(595 \times 
 
 \subsection{Data Specfications}
 \todo{dataset specifics}
-MIDI data used for this experiment has been narrowed down to strictly two-stave piano "inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
+MIDI data used for this experiment has been narrowed down to strictly fifteen two-stave "inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
 These works maintain relatively similar quantization schemes (rhythms and durations of notes), are short, and have several clear transcriptions for research, education, and entertainment purposes.
+
+Testing was performed against a handful of arbitrary "preludes" and "fugues," also written by Bach. 
+Limiting the training and testing sets, (especially in a way that limits the ability to calculate an overall accuracy), is purposefully done in the context of this experiment.
+First, there are no expectations for relatively "accurate" recreations of score images in Lilypond. 
+A proper training model would require extensive tokenization for all symbolic details that help to render a Lilypond file, which is outside of the scope of this research endeavor.
+Rather, output is manually analyzed against its correlated image to determine what musical or notational qualities were generalized.
+Second, a broader dataset would drastically complicate the CRNN model's ability to generalize key features of score images.
+Focus on a single composer, musical time period, and music "type" (prelude, waltz, rondo, etc.) allows the model to more quickly generalize aspects of the subset of music, at the cost of potentially overfitting to the subset.
+
 
 \begin{figure}
 	\begin{subfigure}
@@ -207,6 +218,45 @@ These works maintain relatively similar quantization schemes (rhythms and durati
 	\caption{Excerpt of Invention No.4; cropped/prepared rendering of Invention No.8.}
 	\label{fig:bach-example}
 \end{figure}
+
+\subsection{Quantization Rendering}
+Similar to simple transformations performed on images, (rotations, coloring, scaling), output for sheet music determined by technical, but musical variables that don't affect the "performance" of the composition.
+In particular, when score images are rendered from the Bach lilypond files, (trivially translated from the Bach MIDI Index~\cite{bach_midi}), there is a required "quantization" value which affects the rhythms and durations visually.
+This quantization, designated $Q \in \mathbb{Z}$, represents what specific note duration counts as a "beat" within a given score. 
+Figure ~\ref{fig:table-duration} lists the most common duration mappings that occur within this experiment.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = .8\linewidth]{./figures/notevalues.jpeg}
+	\caption{Table of common duration-integer mappings, from Francis Hamzagic ~\cite{hamzagic_2018}}
+	\label{fig:table-duration}
+\end{figure}
+
+Drastic change of $Q$ results in score images that appear muddled or illegible despite conveying the same musical information, as shown in Figure ~\ref{fig:quantization}.
+In order to prevent drastic shifts due to quantization, an optimal quantization $\hat Q$ is calculated with
+
+\begin{figure}
+	\centering
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/c1.png}
+	\end{subfigure}
+	~
+	\begin{subfigure}
+		\centering
+		\includegraphics[width = .8\linewidth]{./figures/c32.png}
+	\end{subfigure}
+	\caption{Levels of Quantization $[2^0, 2^5]$ in Rendering}
+	\label{fig:quantization}
+\end{figure}
+
+\begin{equation}
+	\hat Q = \max_{t\in \text{MIDI events}} \frac{\tau * 10^{-6}}{t} * n * \text{floor}(d / 4)
+\end{equation}
+
+where $t$ is the number of seconds for a MIDI event to occur, $\tau$ is the provided MIDI tempo in beats per microsecond, and $(n, d)$ are the numerator and denominator, respectively, of the piece's time signature.
+Additionally, possible $\hat Q$ are limited to powers of 2 greater than 0 in order to reduce complication from compound time signatures, (where beats are not represented by durations in Figure ~\ref{fig:table-duration}).
+
 
 \section{Results}
 \todo{results}
