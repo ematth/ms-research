@@ -1,4 +1,4 @@
-\documentclass[review,sigconf]{acmart}
+\documentclass[sigconf]{acmart}
 
 \usepackage{graphicx}
 \usepackage{listings}
@@ -31,8 +31,9 @@
 
 		\vspace{0.5cm}
 		This report explores the feasibility of Lilypond as a digital music format in the process of optical music recognition and translation for full scores.
-		A simple Convolutional Recurrent Neural Network (CRNN) implementation was trained on Inventions by Johann Sebastian Bach, and test outputs of other Bach works were analyzed for generalization in the Lilypond format.
-		Overall, \todo{results} 
+		A simple Convolutional Recurrent Neural Network (CRNN) implementation was trained on Inventions by Johann Sebastian Bach, with intention for test outputs of other Bach works to be analyzed for generalization in the Lilypond format.
+		Overall, an implementation of the Shi, et al. CRNN model was unsuccessful in providing Lilypond predictions for analysis. 
+		However, current state-of-the-art CRNN with other digital music formats provide an extensive survey of what is can be accomplished in full-score optical music recognition.
 
 		\begin{figure}
 			\centering
@@ -165,12 +166,11 @@ Figure~\ref{fig:lilypond-example} compares the rendering of a single staff of mu
 \section{Experiment}
 
 \subsection{CRNN Model}
-\todo{CRNN model}
 The proposed Image-to-MIDI model is a smaller model referencing Shi, et al.'s pioneering work in the creation of CRNNs~\cite{shi2015endtoend}.
 The model itself consists of multiple two-dimensional Convolutional/MaxPooling pairs for the purpose of extracting features from the intial score images.
 Batch normalization layers are also applied to refine data recovered from the feature extraction.
 Lastly, features are pushed through two bidirectional LSTM layers- the recurrent layers of the model- for data prediction with respect to "sequences" of the images.
-In this case, sequences of the image data are the pixel columns of \todo{595?} $(595 \times H)$ images, where $H$ is the height of the image dependent on the overall "length" of the music.
+In this case, sequences of the image data are the pixel columns of $(W \times H)$ images, where $W$ is the pixel width of standard "letter" paper commonly used for scores, and $H$ is the height of the image dependent on the overall "length" of the music.
 
 \begin{figure}
 	\centering
@@ -180,8 +180,7 @@ In this case, sequences of the image data are the pixel columns of \todo{595?} $
 \end{figure}
 
 \subsection{Data Specfications}
-\todo{dataset specifics}
-MIDI data used for this experiment has been narrowed down to strictly fifteen two-stave "inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
+MIDI data used for this experiment has been narrowed down to strictly fifteen two-stave "Inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
 These works maintain relatively similar quantization schemes (rhythms and durations of notes), are short, and have several clear transcriptions for research, education, and entertainment purposes.
 
 Testing was performed against a handful of arbitrary "preludes" and "fugues," also written by Bach. 
@@ -247,14 +246,22 @@ Additionally, possible $\hat Q$ are limited to powers of 2 greater than 0 in ord
 
 
 \section{Results}
-\todo{results}
+Due to technical conflicts with my intended dataset, (variable-height images against Lilypong string data),
+ the CRNN model proved unsuccessful in training and producing any results in the Lilypond formatting language.
+While this result complicates my analysis of Lilypond for machine learning, a meta-analysis of state-of-the-art OMR research with CRNN models still provides significant findings towards the previously mentioned research questions.  
 
 \section{Discussion}
 
-The following section details my analysis with respect to the previously mentioned research questions (\textbf{RQ1-3}).
+The following section details my meta-analysis of reference work with respect to the previously mentioned research questions (\textbf{RQ1-3}).
 
 \subsection{Model Generalization (RQ1)}
-Given that resulting text output consisted of 
+Given the visual encoding aspects of Lilypond, a simple CRNN model would struggle to accomplish several layers of recognition at once.
+However, multiple simple CRNNs would be successful in learning the Lilypond file schematic and musical information provided that both levels are tokenized and separated.
+The work of Nugroho and Zahra, for instance, validates the ability of a simple CNN architecture to solely recognize musical symbols in context ~\cite{nugroho_zahra_2024}.
+
+With additional features and data preparation, CRNN models are shown to accurately parse and transcribe full scores of monophonic\footnote{\textit{monophonic} refers to having one "voice" of musical information.} and homophonic~\footnote{\textit{homophonic} refers to having multiple voices of music sharing the same note rhythms and durations.} music ~\cite{contreras2023omrcnn}.
+In turn, the additional preparation, which forcibly standardizes the data to assist in training, sterilizes the diverse nuances that come with all possible sheet music, 
+including physical aging, printing error, different notation fonts, sizes and shapes of scores, and the immense dictionary of musical symbols, (standardized or unique to specific pieces of music).
 
 \subsection{Format Comparison (RQ2)}
 Lilypond is not, by all means, a perfect music formatting language. 
@@ -262,9 +269,12 @@ Being a format focused on the visual clarity of musical notation, I find that th
 In particular, additional keywords for the representation and position of solely visual elements of a score, 
 along with their necessary language features like brackets and spacers, strongly inhibit basic CRNN models from making noticeable music generalizations.
 
+More complex CRNN models and state-of-the-art work currently provides towards support for Lilypond in this context.
+Mayer, et al.'s \textit{Linearized MusicXML}~\cite{mayer2024practical}, a specially-designed superset of MusicXML, demonstrates how complex CRNNs can accurately generalize document-level and music-level data.
+
 
 \subsection{Model Criticism (RQ3)}
-My CRNN implementation, along with the CRNN model for which my research references, are not without barriers preventing consistent musical generalization.
+My CRNN implementation, along with the CRNN model for which my research references, are not without active barriers preventing consistent musical generalization.
 In staying consistent with my description of the Lilypond language, my critiques against CRNNs are categorized by what should exist in order for music-level and document-level generalizations to occur.
 
 \subsubsection{Music-level Generalization}
