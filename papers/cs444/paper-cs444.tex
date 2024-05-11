@@ -64,7 +64,7 @@
 In the world of music or audio transcription/arrangement, the complexity of sound and score data has allowed human performance to remain the current state-of-the-art. 
 Several factors contribute to this circumstance: the number of potential audio and score file types, ambiguity on how performance qualities are notated, and overall inconsistencies between recordings and their respective scores. 
 Machine learning models, in turn, have been a crucial step towards reducing these inconsistencies. 
-Their ability to learn the nonlinearities and artistic qualities that otherwise plague audio computation have allowed for noteworthy advancements such as the WaveNet~\cite{oord2016wavenet}. 
+Their ability to learn the nonlinearities and artistic qualities that otherwise plague audio computation have allowed for noteworthy advancements such as WaveNet~\cite{oord2016wavenet}. 
 The remaining issue in the process of sound generation is the amount of data available to train with. 
 Worthwhile audio data remains difficult to collect due to its large size and potential copyright issues. 
 In particular, trying to condition off another medium is incredibly difficult as current datasets lack the correlations necessary to streamline the audio transcription process. 
@@ -76,14 +76,14 @@ Finally, a conversion of this type allows for more flexible datasets because MID
 
 \subsection{Known Limitations}
 
-Given the vast complexity of western music notation and intricacies in notation/time alignment, the proposed model has a pessimistic approach. 
+Given the vast complexity of classical western music notation and intricacies in notation/time alignment, the proposed model maintins a rather pessimistic approach. 
 That is, given a small subset of musical data (\textit{among all notated music}) and some model, results can be expected to only match expected outputs through one or more of: pitch, rhythm, duration, and overall formatting.
 Existing research in OMR supports these expectations. First, several digital notation systems exist for music, including: 
 
 \begin{itemize}
 	\item Standards like \textit{MusicXML}, \textit{Lilypond} and \textit{MIDI},
 	\item Software-specific formats from \textit{Musescore}, \textit{Sibelius} and \textit{Finale},
-	\item \textit{KERN} from the Humdrum tool-set ~\cite{contreras2023omrpian},
+	\item \textit{KERN} from the Humdrum tool-set ~\cite{contreras2023omrpiano},
 	\item Mayer, et al.'s \textit{Linearized MusicXML} ~\cite{mayer2024practical}, and
 	\item Contreras, et al.'s untitled "end-to-end OMR" encoding language ~\cite{contreras2023omrcnn}.
 \end{itemize} 
@@ -99,7 +99,7 @@ However, it should be noted that CNNs are still viable for their non-order-depen
 
 \subsection{Research Questions}
 
-Despite low research expectations, I believe that a few questions can be posed and answered for the purpose of bounding requirements on a larger, all-encompassing Image-to-MIDI model:
+Despite low expectations for training and results, I believe that a few questions can be posed and answered for the purpose of bounding requirements on a larger, all-encompassing Image-to-MIDI model:
 
 \begin{itemize}
 	\item [\textbf{RQ1}] What forms of recognition can be expected from a generalized CRNN implementation?
@@ -116,7 +116,7 @@ This research question refers to all-encompassing limitations such as in \textbf
 
 \section{Background}
 \subsection{Optical Music Recognition}
-Current research in Optical Music Recognition (OMR) can be put in one of two categories:
+Current research in Optical Music Recognition (OMR) can be placed in one of two categories:
 
 \begin{itemize}
 	\item \textbf{Symbol Recognition:} the ability for a model to recognize individual symbols on a score.
@@ -129,7 +129,7 @@ All notes, for example, have unique pitches dependent on their placement in a sc
 The playback of notes is also determined by surrounding symbols such as accidentals (natural, sharp, flat), rhythmic symbols (the type of duration, a "dot" for an additional half of that note's duration).
 Finally, the highest level of context is staff-related information, which includes clefs (treble, bass, alto, tenor; determining the relation between note placement and audible pitches), time signatures and key signatures (for adding context for an entire piece of music).
 
-On the other hand, Music Transcription entirely of the Symbol Recognition problem, (iteratively for some amount of sheet music) as well as problems with correlating recognized symbols in sequence.
+On the other hand, Music Transcription encompasses the entire Symbol Recognition problem, (iteratively for some amount of sheet music) as well as problems with correlating recognized symbols in sequence.
 On its own, Symbol Recognition could recognize every component of a piece of music, but these results lack the ordered context necessary for transcription.
 State-of-the-art transcription through machine learning, as a result, has been dominated by the Convolutional Recurrent Neural Network (CRNN). 
 Unlike CNNs, CRNNs make use of recurrent layers, (such as bidirectional LSTM layers in Shi, et al. ~\cite{shi2015endtoend}) in order to contextualize sequences of data forwards and backwards.
@@ -165,7 +165,7 @@ At the music level, rhythmic musical symbols are notated according to their pitc
 pitches are all characters ${a, b, c, d, e, f, g, r}$, where $r$ is a "rest" meaning no pitch occurs.
 To ascend or descend in pitch beyond a single musical "octave," the $'$ and $,$ characters are appended to indicate one or more octave ascendings or descendings, respectively.
 Pitches are also proceeded by a rhythmic value representing its duration in time.
-These values are typically powers of two, (but can technically be any positive floating-point value), and they dictate how long a pitch is played with respect to the piece's time signature.
+These values are typically powers of two, (but can technically be any positive integer), and they dictate how long a pitch is played with respect to the piece's time signature.
 For example, a score with time signature = 2/4 indicates that each measure has two beats, and each beat is the length of a quarter note (hard-coded in the denominator).
 In this case, the line $"c4 \quad d4"$ would represent two quarter (4) notes or a single measure in the provided time signature.
 Additionally, notes without defined durational values take on the previous note's duration in a line, so a series of equal-duration notes is represented by one durational value.
@@ -183,7 +183,7 @@ Figure~\ref{fig:lilypond-example} compares the rendering of a single staff of mu
 		\centering
 		\includegraphics[width = .8\linewidth]{./figures/lilypond-code.png}
 	\end{subfigure}
-	\caption{Lilypond (.ly) code and rendering}
+	\caption{Lilypond (.ly) code and rendering.}
 	\label{fig:lilypond-example}
 \end{figure}
 
@@ -199,7 +199,7 @@ In this case, sequences of the image data are the pixel columns of $(W \times H)
 \begin{figure}
 	\centering
 	\includegraphics[width = .8\linewidth]{./figures/crnn_arch.png}
-	\caption{General CRNN architecture, as modeled by Shi, et al. ~\cite{shi2015endtoend}}
+	\caption{General CRNN architecture, as modeled by Shi, et al. ~\cite{shi2015endtoend}.}
 	\label{fig:crnn-arch}
 \end{figure}
 
@@ -231,15 +231,15 @@ Focus on a single composer, musical time period, and music "type" (prelude, walt
 \end{figure}
 
 \subsection{Quantization Rendering}
-Similar to simple transformations performed on images, (rotations, coloring, scaling), output for sheet music determined by technical, but musical variables that don't affect the "performance" of the composition.
+Similar to simple transformations performed on images, (rotations, coloring, scaling), output for sheet music is determined by both technical and musical constraints that don't affect the "performance" of the composition.
 In particular, when score images are rendered from the Bach lilypond files, (trivially translated from the Bach MIDI Index~\cite{bach_midi}), there is a required "quantization" value which affects the rhythms and durations visually.
-This quantization, designated $Q \in \mathbb{Z}$, represents what specific note duration counts as a "beat" within a given score. 
+This quantization, designated $Q \in \mathbb{Z}^+$, represents what specific note duration counts as a "beat" within a given score. 
 Figure ~\ref{fig:table-duration} lists the most common duration mappings that occur within this experiment.
 
 \begin{figure}
 	\centering
 	\includegraphics[width = .8\linewidth]{./figures/notevalues.jpeg}
-	\caption{Table of common duration-integer mappings, from Francis Hamzagic ~\cite{hamzagic_2018}}
+	\caption{Table of common duration-integer mappings, from Francis Hamzagic ~\cite{hamzagic_2018}.}
 	\label{fig:table-duration}
 \end{figure}
 
@@ -257,7 +257,7 @@ In order to prevent drastic shifts due to quantization, an optimal quantization 
 		\centering
 		\includegraphics[width = .8\linewidth]{./figures/c32.png}
 	\end{subfigure}
-	\caption{Levels of Quantization $Q = [1, 32]$ in Rendering}
+	\caption{Levels of quantization $Q = (1, 32)$ in rendering, respectively.}
 	\label{fig:quantization}
 \end{figure}
 
@@ -298,8 +298,8 @@ Mayer, et al.'s \textit{Linearized MusicXML}~\cite{mayer2024practical}, a specia
 
 
 \subsection{Model Criticism (RQ3)}
-My CRNN implementation, along with the CRNN model for which my research references, are not without active barriers preventing consistent musical generalization.
-In staying consistent with my description of the Lilypond language, my critiques against CRNNs are categorized by what further work should be done in order for music-level and document-level generalizations to occur.
+My CRNN implementation, along with the CRNN models for which my research references, are not without active barriers preventing consistent musical generalization.
+In staying consistent with my description of the Lilypond formatting language, my critiques against CRNNs are categorized by what further work should be done in order for music-level and document-level generalizations to occur.
 
 \subsubsection{Music-level Generalization}
 The primary issue holding current CRNN models back is their inability to generalize to polyphonic~\footnote{\textit{polyphonic} refers to having multiple voices of music with different rhythms and durations.} music.
@@ -317,8 +317,8 @@ Historical datasets are also quite possible, albeit as scanned images with no ma
 \subsubsection{Document-level Generalization}
 At the document level, the greatest issue plaguing OMR research is the lack of a formatting language standard, or lack of similarity between all formatting languages.
 Every formatting language has separate means of conveying equivalent musical information based on the user's needs, (i.e. MIDI for real-time data, MusicXML for web-related music, Lilypond for polished layouts).
-However, as the needs of users vary in the numerous niches of music production, technology and composition, digital music encoding and datasets slowly slow the possibility of standardization.
-While MIDI and MusicXML are currently the most popular for datasets, both lack consistency in rendering sheet music across all digital notation platforms.
+However, as the needs of users vary in the numerous niches of music production, technology and composition, digital music encoding and datasets slowly diminish the possibility of standardization.
+While MIDI and MusicXML are currently the most popular for datasets, both formats lack consistency in rendering sheet music across all digital notation platforms.
 I believe consistency on this front is crucial for reducing variability in musical machine learning datasets. In particular, sheet music should "look the same" regardless of the formatting language it is imported from. 
 
 \section{Conclusions}
