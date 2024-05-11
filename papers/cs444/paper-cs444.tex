@@ -1,4 +1,4 @@
-\documentclass[sigconf]{acmart}
+\documentclass[nonacm, sigconf]{acmart}
 
 \usepackage{graphicx}
 \usepackage{listings}
@@ -116,12 +116,36 @@ This research question refers to all-encompassing limitations such as in \textbf
 
 \section{Background}
 \subsection{Optical Music Recognition}
-\todo{OMR background}
+Current research in Optical Music Recognition (OMR) can be put in one of two categories:
 
 \begin{itemize}
-	\item \textbf{Symbol Recognition:} a
-	\item \textbf{Music Transcription:} b
+	\item \textbf{Symbol Recognition:} the ability for a model to recognize individual symbols on a score.
+	\item \textbf{Music Transcription:} the ability for a model to recognize and transcribe multiple symbols or long passages into a new musical format.
 \end{itemize}
+
+The problem of Symbol Recognition is nearly identical to that of text recognition with the exception of a separate set of possible symbols.
+Additionally, unlike situations where text is perfectly aligned for recognition, musical symbols need to be recognized with respect to their shape and position in order to achieve a high accuracy.
+All notes, for example, have unique pitches dependent on their placement in a score, (on a "line" or "space" in a staff, above or below a staff).
+The playback of notes is also determined by surrounding symbols such as accidentals (natural, sharp, flat), rhythmic symbols (the type of duration, a "dot" for an additional half of that note's duration).
+Finally, the highest level of context is staff-related information, which includes clefs (treble, bass, alto, tenor; determining the relation between note placement and audible pitches), time signatures and key signatures (for adding context for an entire piece of music).
+
+On the other hand, Music Transcription entirely of the Symbol Recognition problem, (iteratively for some amount of sheet music) as well as problems with correlating recognized symbols in sequence.
+On its own, Symbol Recognition could recognize every component of a piece of music, but these results lack the ordered context necessary for transcription.
+State-of-the-art transcription through machine learning, as a result, has been dominated by the Convolutional Recurrent Neural Network (CRNN). 
+Unlike CNNs, CRNNs make use of recurrent layers, (such as bidirectional LSTM layers in Shi, et al. ~\cite{shi2015endtoend}) in order to contextualize sequences of data forwards and backwards.
+These layers, along with attention cells focused on deriving pitch, rhythm and durational context, allow for CRNNs to recognize and output ordered sequences of logical musical data.
+
+Additionally, it is important to recognize that musical data sequences are ordered along multiple dimensions.
+Contreras, et al. provides an excellent diagram of this ordering in their work with respect to how notes have a separate "ordering" from other symbols.
+State-of-the-art CRNNs, in turn, are able to recognize this multi-dimensional ordering to a point, (see 5.3.1) so long as specific elements of the music are kept constant.
+In the case of most OMR research, the rhythms and durations are kept constant across multiple voices, (unless only a single voice is used).
+
+\begin{figure}
+	\centering
+	\includegraphics[width = .8\linewidth]{./figures/ordering.png}
+	\caption{multi-dimensional ordering in sheet music ~\cite{contreras2023omrcnn}.}
+	\label{fig:ordering}
+\end{figure}
 
 \subsection{Lilypond}
 Lilypond was chosen for dataset file representation as it maintains accurate translation between digital (MIDI) and visual (image) notation systems~\cite{lilypond}.
@@ -183,7 +207,7 @@ In this case, sequences of the image data are the pixel columns of $(W \times H)
 MIDI data used for this experiment has been narrowed down to strictly fifteen two-stave "Inventions" by Johann Sebastian Bach ~\cite{bach_midi} to maintain rhythmic and compositional uniformity.
 These works maintain relatively similar quantization schemes (rhythms and durations of notes), are short, and have several clear transcriptions for research, education, and entertainment purposes.
 
-Testing was performed against a handful of arbitrary "preludes" and "fugues," also written by Bach. 
+Testing is performed against a handful of arbitrary "preludes" and "fugues," also written by Bach. 
 Limiting the training and testing sets, (especially in a way that limits the ability to calculate an overall accuracy), is purposefully done in the context of this experiment.
 First, there are no expectations for relatively "accurate" recreations of score images in Lilypond. 
 A proper training model would require extensive tokenization for all symbolic details that help to render a Lilypond file, which is outside of the scope of this research endeavor.
@@ -259,7 +283,7 @@ Given the visual encoding aspects of Lilypond, a simple CRNN model would struggl
 However, multiple simple CRNNs would be successful in learning the Lilypond file schematic and musical information provided that both levels are tokenized and separated.
 The work of Nugroho and Zahra, for instance, validates the ability of a simple CNN architecture to solely recognize musical symbols in context ~\cite{nugroho_zahra_2024}.
 
-With additional features and data preparation, CRNN models are shown to accurately parse and transcribe full scores of monophonic\footnote{\textit{monophonic} refers to having one "voice" of musical information.} and homophonic~\footnote{\textit{homophonic} refers to having multiple voices of music sharing the same note rhythms and durations.} music ~\cite{contreras2023omrcnn}.
+With additional features and data preparation, CRNN models are shown to accurately parse and transcribe full scores of monophonic\footnote{\textit{monophonic} refers to having one voice of musical information.} and homophonic~\footnote{\textit{homophonic} refers to having multiple voices of music sharing the same note rhythms and durations.} music ~\cite{contreras2023omrcnn}.
 In turn, the additional preparation, which forcibly standardizes the data to assist in training, sterilizes the diverse nuances that come with all possible sheet music, 
 including physical aging, printing error, different notation fonts, sizes and shapes of scores, and the immense dictionary of musical symbols, (standardized or unique to specific pieces of music).
 
@@ -275,16 +299,42 @@ Mayer, et al.'s \textit{Linearized MusicXML}~\cite{mayer2024practical}, a specia
 
 \subsection{Model Criticism (RQ3)}
 My CRNN implementation, along with the CRNN model for which my research references, are not without active barriers preventing consistent musical generalization.
-In staying consistent with my description of the Lilypond language, my critiques against CRNNs are categorized by what should exist in order for music-level and document-level generalizations to occur.
+In staying consistent with my description of the Lilypond language, my critiques against CRNNs are categorized by what further work should be done in order for music-level and document-level generalizations to occur.
 
 \subsubsection{Music-level Generalization}
+The primary issue holding current CRNN models back is their inability to generalize to polyphonic~\footnote{\textit{polyphonic} refers to having multiple voices of music with different rhythms and durations.} music.
+That is, state-of-the-art models fail to solve the problem of recognizing and transcribing several different "voices" of music at the same time.
+Solutions related to the separation of these voices, (i.e. removing sequences as they are recognized from the original score), approach the homophonic algorithm, but they also introduce problems.
+For instance, when a voice is removed, determining whether intersecting voices were affected is rather difficult.
 
+Additionally, a majority of OMR research relies on datasets consisting of digital or digitized musical scores.
+This choice for data is fair when considering that OMR models require upwards of hundreds of scores for proper training~\cite{mayer2024practical}, but it also limits the diversity of scores and contexts that ML transcription can be used for.
+In particular, standards for scores have changed several times over centuries of music history, yet the formatting of historical scores is often left behind in modern transcriptions.
+The solution to this issue, while partly related to current models, lies in the amount of trainable data across all eras of classical music and the ability to notate historical scores.
+Modern notation software, while addressing current standards, thankfully includes typing for historical symbols, but these symbols have yet to be properly implemented in popular formatting languages.
+Historical datasets are also quite possible, albeit as scanned images with no manually-transcribed digital reference as of the current day.   
 
 \subsubsection{Document-level Generalization}
+At the document level, the greatest issue plaguing OMR research is the lack of a formatting language standard, or lack of similarity between all formatting languages.
+Every formatting language has separate means of conveying equivalent musical information based on the user's needs, (i.e. MIDI for real-time data, MusicXML for web-related music, Lilypond for polished layouts).
+However, as the needs of users vary in the numerous niches of music production, technology and composition, digital music encoding and datasets slowly slow the possibility of standardization.
+While MIDI and MusicXML are currently the most popular for datasets, both lack consistency in rendering sheet music across all digital notation platforms.
+I believe consistency on this front is crucial for reducing variability in musical machine learning datasets. In particular, sheet music should "look the same" regardless of the formatting language it is imported from. 
 
 \section{Conclusions}
-\todo{conclusions}
-Overall, despite low expectations for workable data, the following experiment and results proved to be quite beneficial in testing the Lilypond format.
+Overall, despite unsuccessful training of a simple CRNN model on Lilypond data, the following meta-analysis proved to be quite beneficial in analyzing the Lilypond formatting language.
+Existing research from several CRNN papers confirms the viability of Lilypond as a format for machine learning, and I believe a combination of this, tokenization for layout-related encoding, 
+and active development of the language would allow it to thrive in current research. 
+I'm especially interested in seeing Lilypond extend into OMR research as its backend contains useful tools for conversion to MIDI and MusicXML, formats with plenty of existing datasets but higher complexity in generalization.
+
+In the future, I would like to focus on a tokenization system for future Lilypond ML models, as this sudden obstacle was the reason for the experiment being unsuccessful.
+Additionally, given my interest in music notation and conversion to related formats, I am hoping to generate non-text-related outputs from digital music data, including audio for performances,
+video for artistic interpretation, and more scientific metrics to bridge the gap between "musical emotion" and psychology.
+
+\section{Conflict of Interest}
+
+My ongoing plans for thesis work, advised by Paris Smaragdis, revolve around the generation of audio conditioned on score images. 
+While this report actively assists in my understanding of the correlations between digital music formats and computer vision, I do not believe that it trivializes any future work in this topic.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references-cs444}
