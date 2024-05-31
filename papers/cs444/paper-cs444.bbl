@@ -1,0 +1,181 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{10}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[bac({[n.\,d.]})]%
+        {bach_midi}
+ \bibinfo{year}{[n.\,d.]}\natexlab{}.
+\newblock \bibinfo{title}{Complete Bach Midi Index}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.bachcentral.com/midiindexcomplete.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Alfaro-Contreras et~al\mbox{.}(2023)]%
+        {contreras2023omrcnn}
+\bibfield{author}{\bibinfo{person}{Mar{\'\i}a Alfaro-Contreras},
+  \bibinfo{person}{Jos{\'e}M. I{\~n}esta}, {and} \bibinfo{person}{Jorge
+  Calvo-Zaragoza}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Optical music recognition for homophonic scores
+  with neural networks and synthetic music generation}.
+\newblock \bibinfo{journal}{\emph{International Journal of Multimedia
+  Information Retrieval}} \bibinfo{volume}{12}, \bibinfo{number}{1}
+  (\bibinfo{year}{2023}), \bibinfo{pages}{12}.
+\newblock
+\showISBNx{2192-662X}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s13735-023-00278-5}
+\showDOI{\tempurl}
+
+
+\bibitem[Hamzagic(2018)]%
+        {hamzagic_2018}
+\bibfield{author}{\bibinfo{person}{Francis Hamzagic}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{Music Theory for Producers - Time Signature Part 2}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://creatingtracks.com/music-theory-producers-time-signature-part-2/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Hawthorne et~al\mbox{.}(2019)]%
+        {hawthorne2018enabling}
+\bibfield{author}{\bibinfo{person}{Curtis Hawthorne}, \bibinfo{person}{Andriy
+  Stasyuk}, \bibinfo{person}{Adam Roberts}, \bibinfo{person}{Ian Simon},
+  \bibinfo{person}{Cheng-Zhi~Anna Huang}, \bibinfo{person}{Sander Dieleman},
+  \bibinfo{person}{Erich Elsen}, \bibinfo{person}{Jesse Engel}, {and}
+  \bibinfo{person}{Douglas Eck}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Enabling Factorized Piano Music Modeling and
+  Generation with the {MAESTRO} Dataset}. In
+  \bibinfo{booktitle}{\emph{International Conference on Learning
+  Representations}}.
+\newblock
+\urldef\tempurl%
+\url{https://openreview.net/forum?id=r1lYRjC9F7}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Lilypond(2024)]%
+        {lilypond}
+Lilypond \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Lilypond music notation for everyone}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://lilypond.org/doc/v2.25/Documentation/web/index}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Mayer et~al\mbox{.}(2024)]%
+        {mayer2024practical}
+\bibfield{author}{\bibinfo{person}{Jiří Mayer}, \bibinfo{person}{Milan
+  Straka}, \bibinfo{person}{Jan~Hajič jr. au2}, {and} \bibinfo{person}{Pavel
+  Pecina}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Practical End-to-End Optical Music Recognition for
+  Pianoform Music}.
+\newblock
+\newblock
+\showeprint[arxiv]{2403.13763}~[cs.CV]
+
+
+\bibitem[Nugroho and Zahra(2024)]%
+        {nugroho_zahra_2024}
+\bibfield{author}{\bibinfo{person}{Douglas~Rakasiwi Nugroho} {and}
+  \bibinfo{person}{Amalia Zahra}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Musical Note Position and Duration Recognition
+  Model in Optical Music Recognition Using Convolutional Neural Network}.
+\newblock \bibinfo{journal}{\emph{Journal of Image and Graphics}}
+  \bibinfo{volume}{12}, \bibinfo{number}{1} (\bibinfo{date}{Jan}
+  \bibinfo{year}{2024}), \bibinfo{pages}{32–39}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18178/joig.12.1.32-39}
+\showDOI{\tempurl}
+
+
+\bibitem[R{\'\i}os-Vila et~al\mbox{.}(2023)]%
+        {contreras2023omrpiano}
+\bibfield{author}{\bibinfo{person}{Antonio R{\'\i}os-Vila},
+  \bibinfo{person}{David Rizo}, \bibinfo{person}{Jos{\'e}~M. I{\~n}esta}, {and}
+  \bibinfo{person}{Jorge Calvo-Zaragoza}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{End-to-end optical music recognition for pianoform
+  sheet music}.
+\newblock \bibinfo{journal}{\emph{International Journal on Document Analysis
+  and Recognition (IJDAR)}} \bibinfo{volume}{26}, \bibinfo{number}{3}
+  (\bibinfo{year}{2023}), \bibinfo{pages}{347--362}.
+\newblock
+\showISBNx{1433-2825}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s10032-023-00432-z}
+\showDOI{\tempurl}
+
+
+\bibitem[Shi et~al\mbox{.}(2015)]%
+        {shi2015endtoend}
+\bibfield{author}{\bibinfo{person}{Baoguang Shi}, \bibinfo{person}{Xiang Bai},
+  {and} \bibinfo{person}{Cong Yao}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{An End-to-End Trainable Neural Network for
+  Image-based Sequence Recognition and Its Application to Scene Text
+  Recognition}.
+\newblock
+\newblock
+\showeprint[arxiv]{1507.05717}~[cs.CV]
+
+
+\bibitem[van~den Oord et~al\mbox{.}(2016)]%
+        {oord2016wavenet}
+\bibfield{author}{\bibinfo{person}{Aaron van~den Oord}, \bibinfo{person}{Sander
+  Dieleman}, \bibinfo{person}{Heiga Zen}, \bibinfo{person}{Karen Simonyan},
+  \bibinfo{person}{Oriol Vinyals}, \bibinfo{person}{Alex Graves},
+  \bibinfo{person}{Nal Kalchbrenner}, \bibinfo{person}{Andrew Senior}, {and}
+  \bibinfo{person}{Koray Kavukcuoglu}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{WaveNet: A Generative Model for Raw Audio}.
+\newblock
+\newblock
+\showeprint[arxiv]{1609.03499}~[cs.SD]
+
+
+\end{thebibliography}
