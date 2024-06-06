@@ -1,2 +1,5 @@
 [submodule "https://github.com/ematth/hifi-gan.git"]
 	url = hifi-gan
+[submodule "hifi-gan"]
+	path = hifi-gan
+	url = https://github.com/ematth/hifi-gan.git
