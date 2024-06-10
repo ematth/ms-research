@@ -1,5 +1,6 @@
 import os
 
+#### Data found in ../../../../mnt/data/musicnet
 
 def filter(ensemble, origin='./metadata.csv', train='./metadata_train.csv', test='./metadata_test.csv'):
     """Split a CSV into training and testing CSVs by ensemble
