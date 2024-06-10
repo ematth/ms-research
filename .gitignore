@@ -2,3 +2,5 @@
 /venv/
 # outputs from lilypond conversion scripts
 /outputs/
+# musicnet dataset
+/musicnet/
