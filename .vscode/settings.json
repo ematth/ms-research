@@ -1,0 +1,5 @@
+{
+    "discord.lowerDetailsDebugging": "Debugging: {dir_name}",
+    "discord.lowerDetailsEditing": "Workspace: {dir_name}",
+    "discord.removeLowerDetails": true
+}
