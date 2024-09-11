@@ -5,11 +5,12 @@
 - Evaluation metric: AudioSimilarity [link](https://github.com/markstent/audio-similarity/blob/main/audio_similarity/audio_similarity.py)
     - Temporal, Rhythmic, Chromatic, Spectral comparisons between baseline audio and conditionally-generated audio.
 
-    FRECHET audio distance
 
-    music clap
+Misc. Thoughts:
+- FRECHET audio distance
 
-    KL distance (bw probabilities)
+- music clap
 
+- KL distance (bw probabilities)
 
-    mixing style transfer
+- mixing style transfer
