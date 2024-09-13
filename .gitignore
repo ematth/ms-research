@@ -4,3 +4,5 @@
 /outputs/
 # musicnet dataset
 /musicnet/
+# toy_model results
+/toy_model/sounds/
