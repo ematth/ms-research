@@ -5,15 +5,16 @@ import models
 import numpy as np
 import sys
 
-MODELS: list[str] = ['musicgen_small', 'musicgen_medium', 'musicgen_large', 'stableaudio_open']
+MODELS: list[str] = ['musicgen_small', 'musicgen_medium', 'musicgen_large', 'stableaudio_open', 'audioldm']
 
 if __name__ == '__main__':
     model: str
     try:
         model = sys.argv[1]
+        print(model)
     except: 
         print(f'Failure in model parameter... falling back on {MODELS[0]}')
-    model = MODELS[0]
+        model = MODELS[0]
 
     if not (model in MODELS):
         raise ValueError(f'Model \"{model}\" does not exist.')

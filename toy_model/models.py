@@ -3,6 +3,7 @@ import soundfile as sf
 from transformers import AutoProcessor, MusicgenMelodyForConditionalGeneration, MusicgenForConditionalGeneration
 import numpy as np
 import sys
+import torch
 
 # device = 1;
 # torch.cuda.device(1)
@@ -131,11 +132,96 @@ def musicgen_large(
     return names
 
 
-# StableAudio Open
+# StableAudio Open 1.0 (Audiosparx 1.0)
+def stableaudio_open(
+        text_prompt: str | list[str] | list[list[str]] = "white noise", 
+        time: int = 15, 
+        outname: str = 'output',
+        num_outputs: int = 2) -> list[str]:
+
+    from diffusers import StableAudioPipeline
+    pipe = StableAudioPipeline.from_pretrained("stabilityai/stable-audio-open-1.0", torch_dtype=torch.float16)
+    pipe = pipe.to("cuda")
+
+    generator = torch.Generator("cuda").manual_seed(0)
+
+    names = []
+    for _ in range(num_outputs):
+        audio = pipe(
+            prompt=text_prompt,
+            negative_prompt="low quality",
+            num_inference_steps=200,
+            audio_end_in_s=time,
+            num_waveforms_per_prompt=3,
+            generator=generator,
+        ).audios
+
+        output_name = f"sounds/{outname}-{np.random.randint(0, 1000, None)}.wav"
+        names.append(output_name)
+        sf.write("{output_name}.wav", audio[0].T.float().cpu().numpy(), pipe.vae.sampling_rate)
+
+    return names
 
 
-# StableAudio 1.0
+# AudioLDM
+def audioldm(
+        text_prompt: str | list[str] | list[list[str]] = "white noise", 
+        time: int = 15, 
+        outname: str = 'output',
+        num_outputs: int = 2) -> list[str]:
+    from diffusers import AudioLDMPipeline
+    import scipy
+
+    repo_id = "cvssp/audioldm-s-full-v2"
+    pipe = AudioLDMPipeline.from_pretrained(repo_id, torch_dtype=torch.float16)
+    pipe = pipe.to("cuda")
+
+    names = []
+    for _ in range(num_outputs):
+        prompt = "Techno music with a strong, upbeat tempo and high melodic riffs"
+        audio = pipe(text_prompt, num_inference_steps=100, audio_length_in_s=time).audios[0]
+
+        # save the audio sample as a .wav file
+        output_name = f"sounds/{outname}-{np.random.randint(0, 1000, None)}"
+        names.append(output_name)
+        sf.write(f"{output_name}.wav", audio, 16000)
+        #scipy.io.wavfile.write(f"{output_name}.wav", rate=16000, data=audio)
+
+    return names
 
 
-# StableAudio 2.0
+# Tango
+# def tango(
+#         text_prompt: str | list[str] | list[list[str]] = "white noise", 
+#         time: int = 15, 
+#         outname: str = 'output',
+#         num_outputs: int = 2) -> list[str]:
 
+#     from tango import Tango
+
+#     tango = Tango("declare-lab/tango")
+
+#     prompt = "An audience cheering and clapping"
+#     audio = tango.generate(prompt)
+#     sf.write(f"{prompt}.wav", audio, samplerate=16000)
+#     IPython.display.Audio(data=audio, rate=16000)
+
+#     names = []
+#     for _ in range(num_outputs):
+#         audio = pipe(
+#             prompt=text_prompt,
+#             negative_prompt="low quality",
+#             num_inference_steps=200,
+#             audio_end_in_s=time,
+#             num_waveforms_per_prompt=3,
+#             generator=generator,
+#         ).audios
+
+#         output_name = f"sounds/{outname}-{np.random.randint(0, 1000, None)}.wav"
+#         names.append(output_name)
+#         sf.write("{output_name}.wav", audio[0].T.float().cpu().numpy(), pipe.vae.sampling_rate)
+
+#     return names
+
+
+# Make-an-Audio 2
