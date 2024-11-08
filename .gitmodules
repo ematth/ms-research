@@ -3,3 +3,6 @@
 [submodule "hifi-gan"]
 	path = hifi-gan
 	url = https://github.com/ematth/hifi-gan.git
+[submodule "textual_inversion"]
+	path = textual_inversion
+	url = https://github.com/ematth/textual_inversion.git

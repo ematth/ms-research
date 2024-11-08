@@ -13,8 +13,7 @@ if __name__ == '__main__':
         model = sys.argv[1]
         print(model)
     except: 
-        print(f'Failure in model parameter... falling back on {MODELS[0]}')
-        model = MODELS[0]
+        print(f'Failure in model parameter... falling back on {model := MODELS[3]}')
 
     if not (model in MODELS):
         raise ValueError(f'Model \"{model}\" does not exist.')
