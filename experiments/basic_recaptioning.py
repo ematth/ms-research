@@ -12,7 +12,7 @@ def basic_generation(prompts: str) -> bool:
     MAX_TOKENS: int = 1500 # 30 seconds of tokens
 
     # Initialize pipe
-    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    device = torch.device(f"cuda:{sys.argv[2]}" if torch.cuda.is_available() else "cpu")
     print(device)
 
     pipe = StableAudioPipeline.from_pretrained("stabilityai/stable-audio-open-1.0", torch_dtype=torch.float16)
@@ -28,7 +28,7 @@ def basic_generation(prompts: str) -> bool:
 
     NUM_WAVEFORMS: int = 3
 
-    for index, line in enumerate(tqdm(data['prompt_text'][0:int(n:=sys.argv[2] if not None else 2)], desc="Generating audio", unit="file")):
+    for index, line in enumerate(tqdm(data['prompt_text'], desc="Generating audio", unit="file")):
         print(f'{index}: {line}')
         # run the generation
         audio = pipe(
@@ -42,8 +42,8 @@ def basic_generation(prompts: str) -> bool:
 
         for i in range(NUM_WAVEFORMS):
             output = audio[i].T.float().cpu().numpy()
-            #sf.write(f"/mnt/data2/evanmm3/basic/basic_{index}_{i}.wav", output, pipe.vae.sampling_rate)
-            sf.write(f"sounds/{index}_{i}.wav", output, pipe.vae.sampling_rate)
+            sf.write(f"/mnt/data2/evanmm3/reword2/reword2_{index}_{i}.wav", output, pipe.vae.sampling_rate)
+            #sf.write(f"sounds/{index}_{i}.wav", output, pipe.vae.sampling_rate)
 
 
 
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     prompts = sys.argv[1]
     basic_generation(prompts)
     print('Audio generation completed.')
+
+    """
+    use: python3 basic_recaptioning.py <prompts.csv> <gpu_id>
+    """
