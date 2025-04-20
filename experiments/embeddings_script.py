@@ -10,7 +10,14 @@ Requires:
 
 import torch, torchaudio, soundfile as sf
 from diffusers import StableAudioPipeline
+import pandas as pd
+from tqdm import tqdm
+import sys, os
+import numpy as np
 
+
+global NUM_WAVEFORMS
+NUM_WAVEFORMS: int = 3
 
 # ---------- utility helpers ----------
 def load_pipe(dtype=torch.float16, device="cuda"):
@@ -40,23 +47,22 @@ def encode_audio(pipe, wav):
     return latents
 
 
-
 def decode_latents(pipe, latents):
     with torch.no_grad():
         wav = pipe.vae.decode(latents).sample
     return wav
 
 
-def remix(pipe, wav, *, steps=200, seed=0, seconds=10.0):
+def remix(pipe, wav, prompt, *, steps=200, seed=42, seconds=10.0):
     wav = wav.to(pipe.device, dtype=pipe.vae.dtype)  # <- added
     g   = torch.Generator(device=pipe.device).manual_seed(seed)
     return pipe(
-        prompt='A gentle stream flowing over smooth rocks in a forest',
+        prompt=prompt,
         num_inference_steps=steps,
         guidance_scale=1.0,
         audio_start_in_s=0.0,
         audio_end_in_s=seconds,
-        num_waveforms_per_prompt=1,
+        num_waveforms_per_prompt=NUM_WAVEFORMS,
         generator=g,
         initial_audio_waveforms=wav,
         initial_audio_sampling_rate=pipe.vae.config.sampling_rate,
@@ -65,24 +71,35 @@ def remix(pipe, wav, *, steps=200, seed=0, seconds=10.0):
 
 # ---------- main workflow ----------
 if __name__ == "__main__":
-    INPUT_WAV = "sounds/sound_0_1.wav"
 
-    pipe = load_pipe()                                   # 1️⃣
-    src_wav = read_wav(INPUT_WAV, pipe.vae.config.sampling_rate)
+    pipe = load_pipe()
 
-    latents = encode_audio(pipe, src_wav)                # 2️⃣
-    torch.save(latents.cpu(), "input_latents.pt")
+    data = pd.read_csv('sound_prompts.csv')
+    print('data loaded')
 
-    recon = decode_latents(pipe, latents).cpu()          # 3️⃣
-    # ----------------- save reconstructed -----------------
-    recon_32 = recon.squeeze().T.to(torch.float32).cpu().numpy()
-    sf.write("sounds/reconstructed2.wav", recon_32,
-            pipe.vae.config.sampling_rate)
+    count_threes: int = 0
+    count_total: int = -1
+    line: str = ''
 
-    variation = remix(pipe, src_wav)[0].cpu()            # 4️⃣
-    # ----------------- save variation -----------------
-    var_32 = variation.T.to(torch.float32).cpu().numpy()
-    sf.write("sounds/variation2.wav", var_32,
-            pipe.vae.config.sampling_rate)
+    for index in range(3000):
 
-    print("Done – check reconstructed.wav and variation.wav")
+        input_wav = f"/mnt/data2/evanmm3/basic/sound_{count_total}_{count_threes}.wav"
+        if count_threes % 3 == 0:
+            line = str(data['prompt_text'][count_total]) # update prompt text every three files.
+            count_total += 1
+        count_threes += 1        
+
+        print(f'({index})\n{input_wav}: {line}')
+
+        src_wav = read_wav(input_wav, pipe.vae.config.sampling_rate)
+
+        latents = encode_audio(pipe, src_wav)                
+        torch.save(latents.cpu(), f"/mnt/data2/evanmm3/ti_latent/latent_{index}.pt")
+
+        variations = remix(pipe, src_wav, line)
+
+        for i in range(NUM_WAVEFORMS):
+            output = variations[i].T.to(torch.float32).cpu().numpy()
+            sf.write(f"/mnt/data2/evanmm3/ti_basic/sound_{index}_{i}.wav", output, pipe.vae.config.sampling_rate)
+
+    print("Done!")
