@@ -51,7 +51,7 @@ def remix(pipe, wav, *, steps=200, seed=42, seconds=10.0):
     wav = wav.to(pipe.device, dtype=pipe.vae.dtype)  # <- added
     g   = torch.Generator(device=pipe.device).manual_seed(seed)
     return pipe(
-        prompt='',
+        prompt='flowing water',
         num_inference_steps=steps,
         guidance_scale=1.0,
         audio_start_in_s=0.0,
