@@ -21,7 +21,7 @@ NUM_WAVEFORMS: int = 1
 
 global DEVICE
 if torch.cuda.is_available():
-    DEVICE = torch.device("cuda:0")
+    DEVICE = torch.device("cuda:7")
 print('Using device:', DEVICE)
 
 # ---------- utility helpers ----------
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
     pipe = load_pipe()
 
-    data = pd.read_csv('sound_prompts.csv')
+    data = pd.read_csv('sound_prompts3.csv')
     print('data loaded')
 
     line: str = ''
@@ -90,7 +90,7 @@ if __name__ == "__main__":
         for k in range(3):
             # Load input wav
             try:
-                input_wav = f"/mnt/data2/evanmm3/basic/sound_{index}_{k}.wav"   
+                input_wav = f"/mnt/data2/evanmm3/reword2/sound_{index}_{k}.wav"   
                 src_wav = read_wav(input_wav, pipe.vae.config.sampling_rate)
             except:
                 print(f"File not found: {input_wav}, moving on...")
@@ -100,12 +100,12 @@ if __name__ == "__main__":
 
             # save latents
             latents = encode_audio(pipe, src_wav)                
-            torch.save(latents.cpu(), f"/mnt/data2/evanmm3/ti_latent/latent_{index}_{k}.pt")
+            torch.save(latents.cpu(), f"/mnt/data2/evanmm3/ti_latent3/latent_{index}_{k}.pt")
 
             # create variation
             variations = remix(pipe, src_wav, line, seed=42*k)
             print(variations.squeeze(0).T.shape)
             output = variations.squeeze(0).T.to(torch.float32).cpu().numpy()
-            sf.write(f"/mnt/data2/evanmm3/ti_basic/sound_{index}_{k}.wav", output, pipe.vae.config.sampling_rate)
+            sf.write(f"/mnt/data2/evanmm3/ti_reword2/sound_{index}_{k}.wav", output, pipe.vae.config.sampling_rate)
 
     print("Done!")
