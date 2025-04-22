@@ -23,7 +23,8 @@ import torchaudio
 from transformers import ClapProcessor, ClapModel
 import pandas as pd
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = "cuda:1" if torch.cuda.is_available() else "cpu"
+print(DEVICE)
 MODEL_NAME = "laion/clap-htsat-unfused"
 SAMPLE_RATE = 48_000  # training SR for CLAP
 
