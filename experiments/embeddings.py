@@ -67,19 +67,19 @@ def remix(pipe, wav, *, steps=200, seed=0, seconds=10.0):
 if __name__ == "__main__":
     INPUT_WAV = "sounds/sound_0_1.wav"
 
-    pipe = load_pipe()                                   # 1️⃣
+    pipe = load_pipe()                                   
     src_wav = read_wav(INPUT_WAV, pipe.vae.config.sampling_rate)
 
-    latents = encode_audio(pipe, src_wav)                # 2️⃣
+    latents = encode_audio(pipe, src_wav)                
     torch.save(latents.cpu(), "input_latents.pt")
 
-    recon = decode_latents(pipe, latents).cpu()          # 3️⃣
+    recon = decode_latents(pipe, latents).cpu()          
     # ----------------- save reconstructed -----------------
     recon_32 = recon.squeeze().T.to(torch.float32).cpu().numpy()
     sf.write("sounds/reconstructed2.wav", recon_32,
             pipe.vae.config.sampling_rate)
 
-    variation = remix(pipe, src_wav)[0].cpu()            # 4️⃣
+    variation = remix(pipe, src_wav)[0].cpu()            
     # ----------------- save variation -----------------
     var_32 = variation.T.to(torch.float32).cpu().numpy()
     sf.write("sounds/variation2.wav", var_32,

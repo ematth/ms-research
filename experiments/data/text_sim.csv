@@ -1,0 +1,1001 @@
+prompt_A,prompt_B,cosine_similarity
+A gentle stream flowing over smooth rocks in a forest,A delicate creek streaming over smooth pebbles amid a forest,0.90313154
+Bustling city street with car horns and people talking,Busy metropolis avenue alongside conveyance warning sounds as well as folk dialoguing,0.69670534
+Rain pattering on a tin roof during a thunderstorm,Storm hitting over a galvanized metal roof throughout a thunderstorm,0.78694034
+Crackling campfire with occasional pops and hisses,Snapping fire including occasional pops together with hisses,0.8202379
+Wind chimes swaying in a light breeze on a porch,Zephyr chimes wavering throughout a light breeze covering a porch,0.8514053
+Waves crashing on a rocky shoreline at sunset,Waves colliding on a rocky seaboard in the course of sundown,0.83621484
+Orchestra warming up before a classical concert,Orchestra gearing up prior to a classical concert,0.8971781
+Children playing in a playground with laughter and shouts,Juveniles engaging within a play area accompanied by laughter plus hollers,0.7558385
+Creaking floorboards in an old abandoned house,Creaking wooden floors throughout an old forsaken house,0.83894104
+Helicopter flying overhead gradually fading into distance,Helicopter flying above ground gradually fading heading to distance,0.9207959
+Birds chirping in a spring morning garden,Birds singing among a spring morning garden,0.9249219
+Coffee shop ambience with quiet conversations and espresso machine,Coffee shop ambience together with subdued conversations in addition to espresso contrivance,0.6758367
+Typewriter keys clacking rapidly with occasional bell ring,Typewriter keys clacking rapidly with random bell ring,0.9619913
+"Thunder rumbling in the distance, slowly approaching","Thunder rumbling throughout the distance, slowly approaching",0.9696424
+Cat purring while sleeping on a windowsill,Cat purring while sleeping across a windowsill,0.97330856
+Sand crunching underfoot on a desert walk,Sand crunching underfoot upon a desert walk,0.97774273
+Wind howling through a narrow mountain pass,Draft howling throughout a narrow mountain pass,0.88137144
+Submarine sonar pings in deep ocean waters,Submarine sonar pings among profound marine environment waters,0.92303956
+Pages of a book being slowly turned in a quiet library,Pages of a book being slowly turned in a quiet library,0.9999999
+Stadium crowd cheering after a goal or touchdown,Stadium multitude cheering after a goal or touchdown,0.9444457
+Glass breaking as it hits a hard floor,Glass breaking as it hits a hard floor,1.0
+Grandfather clock ticking and chiming at midnight,Grandfather timer sounding as well as chiming for midnight,0.809003
+Rain forest ambience with exotic bird calls and insects,Rain forest ambience plus exotic bird calls together with insects,0.9208704
+Busy restaurant with dishes clattering and background chatter,Teeming food venue with dishes clattering and background chatter,0.9068625
+Horse galloping across an open field,Horse galloping across an open field,1.0
+Spaceship engine humming at a constant frequency,Spaceship powerplant buzzing at a constant frequency,0.8843936
+Train passing by with whistle blowing,Metro passing by featuring whistle blowing,0.81736994
+Saxophone solo in a smoky jazz club,Saxophone solo within a smoky jazz club,0.9731089
+Whispering voices in an empty corridor,Whispering voices in an empty corridor,1.0000001
+Crackling radio static with occasional voice fragments,Sparking radio static with occasional voice fragments,0.9545225
+Bubbling brook with birds singing in background,Bubbling brook featuring feathered creatures singing throughout background,0.8944199
+Whale song echoing through ocean depths,Whale song echoing across waters depths,0.9488134
+Laser gun battle with energy weapons firing,Laser gun battle with energy weapons firing,1.0000001
+Heartbeat monitor beeping steadily in hospital room,Heartbeat monitor beeping steadily among hospital room,0.963791
+Creaky wooden ship rocking on gentle waves,Unstable wooden ship rocking atop soft swells,0.7934563
+Howling wolf in a moonlit forest,Howling wolf in a moonlit forest,1.0000001
+Typing on a mechanical keyboard with clicky switches,Typing covering a mechanical key interface plus clicky switches,0.828679
+Old vinyl record with crackling and pops,Historic vinyl record alongside crinkling and snaps,0.8173828
+Sizzling food on a hot grill or pan,Sizzling food on a hot grill or pan,1.0000001
+Church bells ringing in a distant village,Church bells resounding within a faint village,0.88483983
+Morning alarm clock ringing persistently,Morning danger signal horologe clanging persistently,0.736697
+Helicopter blades whirring during takeoff,Rotary aircraft blades whirring during takeoff,0.8877567
+Ice cream truck melody playing down a suburban street,Ice cream truck melody running down a suburban boulevard,0.930988
+Wind rustling through autumn leaves,Air current rustling across autumn fronds,0.86808836
+Footsteps running on concrete in the rain,Paces running on concrete during the rain,0.86060375
+Computer server room with multiple fans humming,Computer server room featuring multiple fans buzzing,0.88952434
+Gentle rainfall on a tent in the wilderness,Gentle rainfall on a tent inside the wilderness,0.97150135
+Airport terminal announcements and distant conversations,Airport terminal announcements and isolated conversations,0.9417393
+Medieval battle with sword clangs and shield impacts,Medieval battle accompanied by sword clangs and shield impacts,0.9484738
+Haunting theremin music in an empty ballroom,Haunting theremin music amidst an empty ballroom,0.92485803
+Robot servos and mechanical movements,Robot servos in addition to mechanical movements,0.87615603
+Propeller airplane engine starting and accelerating,Propeller airplane engine starting and accelerating,1.0
+Thunderous applause in a concert hall,Thunderous applause among a concert hall,0.9662199
+Bowling ball hitting pins in a bowling alley,Bowling ball hitting pins during a bowling alley,0.97518146
+Squeaky door slowly opening in a dark house,Squeaky door slowly opening within a dark house,0.97329384
+Dial-up internet connection sounds,Dial-up internet connection sounds,1.0
+Crowded swimming pool with splashing and laughter,Crowded swimming pool with splashing coupled with hilarity,0.87640023
+Antique music box playing a lullaby,Antique music box playing a lullaby,0.99999994
+Chainsaw cutting through wood,Chainsaw cutting through wood,1.0
+Motorcycle engine revving loudly,Motorcycle engine revving loudly,0.9999999
+Blender mixing a smoothie on high speed,Blender mixing a smoothie on high speed,0.99999994
+Bamboo wind chimes in a Japanese garden,Bamboo blast chimes during a Japanese garden,0.9031625
+Ping pong ball bouncing on a table,Ping pong ball bouncing atop a table,0.9662943
+Howling blizzard with intense wind,Howling blizzard alongside intense draft,0.88151574
+Crackling campfire with people quietly talking,Crinkling fire pit together with humans quietly talking,0.8507776
+Distant foghorn on a misty ocean,Distant foghorn atop a misty ocean,0.93075204
+Cicadas chirping on a hot summer evening,Cicadas twittering on a hot summer evening,0.9237172
+Arcade game sounds from the 1980s,Arcade game sounds from the 1980s,1.0
+Babbling brook with frogs croaking,Babbling brook featuring frogs croaking,0.95930994
+Wind through pine trees in a mountain forest,Air movement by way of pine trees amid a mountain forest,0.7557132
+Medieval tavern with music and chatter,Medieval tavern accompanied by music and chatter,0.9660164
+Industrial factory with machinery humming,Industrial factory accompanied by machinery whirring,0.82171655
+Slow dripping water in a cave,Deliberate dripping water amidst a cave,0.77909714
+Clock tower striking twelve at midnight,Clock tower striking twelve during midnight,0.97163093
+Busy hospital emergency room ambience,Busy hospital emergency room ambience,1.0
+Dog barking excitedly as someone arrives home,Dog barking excitedly as someone arrives home,1.0
+Soothing meditation bowl being struck,Soothing meditation bowl being struck,0.99999994
+Giant creature stomping through a forest,Giant creature stomping via a forest,0.9562226
+Grandfather telling a bedtime story,Grandfather telling a bedtime story,1.0
+Fireworks exploding in the distance,Fireworks exploding throughout the distance,0.95272535
+Windshield wipers squeaking on rainy drive,Windshield wipers squeaking covering rainy drive,0.9411465
+Bustling farmers market with vendors calling out,Bustling farmers fair plus vendors calling out,0.92443365
+Old film projector clicking and whirring,Antique film projector clicking in addition to whirring,0.86304486
+Bees buzzing around a flowering garden,Bees buzzing around a flowering garden,0.99999994
+Alien spacecraft landing with strange emissions,Alien spacecraft landing including strange emissions,0.9709103
+School bell ringing and hallway commotion,School bell ringing together with hallway commotion,0.9411853
+Peaceful night crickets and occasional owl hoots,Peaceful night crickets plus infrequent owl hoots,0.9504408
+Casino slot machines dinging and paying out coins,Casino slot machines dinging also paying out coins,0.9299778
+Footsteps crunching through fresh snow,Foot falls crunching through fresh snow,0.9170423
+Microwave oven humming and beeping,Microwave oven buzzing plus beeping,0.9096086
+Distant thunder during a gentle rain shower,Distant crash throughout a gentle rainfall shower,0.838227
+Creaking rocking chair on an old porch,Straining rocking chair covering an old porch,0.86601865
+Church organ playing a somber hymn,Church organ playing a somber hymn,1.0
+Crackling bonfire with people singing folk songs,Spitting bonfire with people singing folk songs,0.9364214
+Seagulls calling over a harbor with boat bells,Seagulls calling over a harbor together with boat bells,0.96931493
+Horse-drawn carriage on cobblestone streets,Horse-drawn carriage on cobblestone streets,0.99999994
+Car driving through puddles after rainfall,Motor car driving through puddles after rainfall,0.9471635
+Old grandfather clock ticking in a quiet room,Aged grandfather timer marking time inside a quiet room,0.7448312
+Windshield wipers on high during heavy rain,Windshield wipers covering high while strong downpour,0.91094613
+Glass wind chimes tinkling in a soft breeze,Glass draft chimes tinkling in a soft breeze,0.94205713
+Bubbling cauldron in a witch's cabin,Bubbling cauldron among a witch's cabin,0.95435584
+Peaceful country morning with roosters crowing,Peaceful country morning including roosters crowing,0.9723742
+Steel drums playing a Caribbean melody,Steel drums playing a Caribbean melody,1.0000001
+Water dripping in an echoing cavern,Water dripping in an echoing cavern,1.0
+Fast-paced typing on a laptop keyboard,Fast-paced typing on a laptop key set,0.9097066
+Crackling of a vintage vinyl record before music,Snapping of a vintage vinyl record before music,0.8883291
+Baby laughing and cooing happily,Baby laughing as well as cooing happily,0.9142531
+Marching band practicing in a distant field,Marching band practicing in a far-off field,0.9438856
+Intense thunderstorm with close lightning strikes,Intense thunderstorm including close lightning strikes,0.97076267
+Construction site with jackhammers and machinery,Construction site together with jackhammers in addition to machinery,0.8712651
+Bowling ball rolling down lane and hitting pins,Bowling ball rolling down lane and hitting pins,1.0
+Gentle night rain with frogs croaking,Mild night downpour accompanied by frogs croaking,0.9066674
+Tennis match with grunts and ball hits,Tennis match together with grunts also ball hits,0.8413768
+Dinner party with clinking glasses and chatter,Dinner party with clinking glasses and chatter,1.0
+Chalk writing on an old blackboard,Chalk writing above an old blackboard,0.962519
+Summer picnic with distant laughter and breeze,Summer picnic with detached amusement coupled with breeze,0.823016
+Old western saloon with piano and boot steps,Timeworn western saloon featuring piano and boot steps,0.903347
+Skateboarder riding on concrete with jumps,Skateboarder riding across concrete plus jumps,0.9592698
+Medieval blacksmith hammering hot metal,Medieval blacksmith hammering hot metal,0.99999994
+Dog panting after playing fetch in a park,Dog panting after playing fetch within a park,0.97657734
+Scuba diving with breathing apparatus bubbles,Scuba diving comprising respiration apparatus bubbles,0.89378357
+Winter night with wind whistling through trees,Winter night with air movement whistling through trees,0.9551795
+Distant train whistle across open countryside,Secluded metro whistle across open countryside,0.83180195
+Automatic sprinklers starting in a garden,Automatic sprinklers starting amidst a garden,0.8964818
+Phone ringing in an empty office,Smartphone tolling among an empty work setting,0.7357781
+Retro video game sounds from an arcade,Retro video game sounds from an arcade,1.0000001
+Clocks ticking at different tempos in a clock shop,Clocks counting while different tempos amid a clock shop,0.8478224
+Heavy rain hitting a canvas tent,Heavy precipitation hitting a canvas tent,0.93586504
+Orchestra tuning before a performance,Orchestra tuning prior to a performance,0.94399023
+Autumn leaves crunching underfoot,Autumn vegetation crunching underfoot,0.923019
+Old cash register opening with bell ring,Timeworn cash register opening featuring bell ring,0.85675895
+Elevator doors opening and closing with ding,Elevator doors opening alongside closing with ding,0.9299416
+Bacon sizzling in a frying pan,Bacon sizzling during a frying pan,0.9573177
+Cricket match with bat hits and crowd reactions,Cricket match together with bat hits also assembly reactions,0.7795921
+Whale breaching the ocean surface with splash,Whale breaching the aquatic realm surface featuring splash,0.86419094
+Space station ambient humming and beeps,Space station ambient buzzing also beeps,0.8751888
+Children playing in snow with laughter,Youngsters engaging amid snow accompanied by amusement,0.7540481
+Bagpipes playing a traditional Scottish tune,Bagpipes playing a traditional Scottish tune,1.0
+Ballroom dance with orchestra and footsteps,Ballroom dance plus orchestra plus foot falls,0.8346988
+Heartbeat gradually increasing in pace,Pulse slowly increasing amid pace,0.77048856
+Wolves howling in a moonlit forest,Wolves howling within a moonlit timberland,0.9214704
+Summer rainstorm approaching with distant thunder,Summer rainstorm approaching together with distant thunder,0.9673076
+Monastery bells calling for prayer,Monastery bells calling for prayer,1.0
+Crystal glasses clinking in a toast,Crystal glasses clinking among a toast,0.93842494
+Tennis ball machine firing balls repeatedly,Tennis ball appliance firing balls repeatedly,0.9559449
+Vinyl record needle drop with initial crackle,Vinyl record needle drop accompanied by initial crackle,0.93197274
+Old steam locomotive chugging and whistling,Old steam locomotive chugging together with whistling,0.9564016
+Whispering wind through tall grass prairie,Whispering wind by way of tall grass prairie,0.930522
+Fox hunt with horns and galloping horses,Fox hunt plus warning sounds in addition to galloping horses,0.7571557
+Cat meowing for attention or food,Cat meowing for attention or food,1.0
+Electric bass guitar playing a funky riff,Electric bass guitar working a funky riff,0.97484046
+Walking through deep snow with squeaky footsteps,Walking amidst deep snow with squeaky footsteps,0.93538934
+Sci-fi computer terminal with typing and beeps,Sci-fi processor terminal plus typing and beeps,0.9427779
+Quill pen scratching on parchment,Quill pen scratching atop parchment,0.8344269
+Distant siren gradually getting closer,Detached siren progressively getting closer,0.82731533
+Office environment with typing and phone calls,Business space environment comprising typing in addition to phone calls,0.7647482
+Fantasy tavern with bards playing and patrons talking,Fantasy tavern with bards running and patrons talking,0.98395234
+Ice cracking on a frozen lake,Ice cracking atop a frozen lake,0.9260253
+Small stream bubbling over rocks in a meadow,Small rivulet bubbling over rocks in a meadow,0.9305748
+Basketball bouncing on court with squeaking shoes,Basketball bouncing covering court plus squeaking shoes,0.86737144
+Gentle ocean waves at night with distant lighthouse foghorn,Delicate waters surf amid night comprising far-off lighthouse foghorn,0.8359062
+Crackling campfire with storyteller speaking softly,Popping fire pit alongside storyteller speaking softly,0.8292555
+Medieval jousting tournament with crowd cheers,Medieval jousting tournament including gathering cheers,0.9423059
+Purring cat sleeping on a windowsill during rain,Purring cat sleeping above a windowsill amid rain,0.93844223
+Desert wind blowing sand against tent canvas,Desert air movement blowing sand against tent canvas,0.944323
+Chopping vegetables on a wooden cutting board,Chopping vegetables on a wooden cutting board,1.0
+Carousel music at an amusement park,Carousel music at an amusement park,0.9999999
+Retro pinball machine with flippers and bells,Retro pinball gadget with flippers as well as bells,0.9209044
+Whispering voices in an ancient tomb,Whispering voices in an ancient tomb,0.99999994
+Horse-drawn sleigh with bells in snow,Horse-drawn sleigh with bells in snow,1.0
+Group meditation with synchronized breathing,Group meditation including synchronized respiration,0.9317466
+Old movie projector clicking with film soundtrack,Ancient movie projector clicking with film soundtrack,0.94447434
+Gentle wind through bamboo forest,Mild zephyr along bamboo forest,0.6972972
+Electric guitar amplifier feedback and distortion,Electric guitar amplifier feedback alongside distortion,0.7351799
+Snowy night with distant wolf howls,Snowy night together with distant wolf howls,0.9775647
+Analog synthesizer creating ambient soundscape,Analog synthesizer creating ambient soundscape,0.9999998
+Morning birds at dawn in springtime,Morning flyers at dawn during springtime,0.89864635
+Helicopter search and rescue operation,Rotary aircraft search and rescue operation,0.8057008
+Pool balls colliding during a game,Pool balls colliding during a game,1.0
+Vintage radio tuning between stations,Vintage radio tuning between stations,1.0
+Rain hitting large tropical leaves in jungle,Drizzle hitting large tropical fronds within jungle,0.7887523
+Sharpening a knife on a whetstone,Sharpening a knife on a whetstone,0.9999999
+Child splashing in puddles with rubber boots,Child splashing amidst puddles with rubber boots,0.9460551
+Busy shopping mall during holiday season,Frantic shopping mall in the course of holiday season,0.72484064
+Sailboat with flapping sails and water against hull,Sailboat including flapping sails and water against hull,0.95583135
+Haunted mansion with creaking floors and distant moans,Haunted mansion comprising creaking floors also detached moans,0.8813137
+Analog alarm clock ticking and ringing,Analog alarm timer tocking and ringing,0.9177627
+Cat purring while kneading a soft blanket,Cat purring while kneading a soft blanket,1.0000001
+Rustling paper as pages turn in book,Crackling paper as pages turn inside book,0.8528585
+Busy highway traffic from distance,Lively highway automobiles from distance,0.725941
+Blacksmith hammering red-hot metal on anvil,Blacksmith hammering red-hot metal over anvil,0.9808939
+Crackling electricity in a mad scientist lab,Sparking electricity amidst a mad scientist lab,0.8141513
+Horse trotting on cobblestone street,Horse trotting over cobblestone street,0.95745206
+Rowdy sports bar during a big game,Rowdy sports bar in the course of a big game,0.90523124
+Children opening presents with excitement,Children opening presents together with excitement,0.96240133
+Freight train passing by with horn blasts,Freight metro passing by comprising horn blasts,0.87051475
+Footsteps on gravel path in quiet garden,Steps on gravel path in faint garden,0.8833112
+Roller coaster with screams and mechanical sounds,Roller coaster with screams also mechanical sounds,0.94914156
+Windmill creaking as blades turn in strong wind,Windmill grating as blades turn inside strong breeze,0.88545126
+Old western town with distant piano music,Archaic western town together with distant piano music,0.8256629
+Ambient hum of a submarine interior,Ambient hum of a submarine interior,1.0
+Cuckoo clock striking the hour,Cuckoo clock striking the hour,0.9999998
+Soccer match with referee whistle and crowd,Soccer match featuring referee whistle and crowd,0.96437263
+Wind howling through abandoned building,Air current howling through abandoned building,0.9044757
+Busy restaurant kitchen during service,Busy eatery kitchen for the duration of service,0.8141366
+Forest creatures at night with owl hoots,Arboretum creatures at night with owl hoots,0.93051213
+Orchestra performing classical symphony,Orchestra performing classical symphony,0.9999999
+Pouring rain on a car roof while driving,Pouring rain against a car roof while driving,0.9722189
+Traditional Native American drum circle,Traditional Native American drum circle,1.0
+Old phonograph playing scratchy jazz record,Ancient phonograph playing scratchy jazz record,0.9633988
+Rocket countdown and powerful launch,Rocket countdown and powerful launch,1.0
+Monks chanting in a stone monastery,Monks chanting amidst a stone monastery,0.95294076
+Crackling campfire with ghost stories,Crackling bonfire together with ghost stories,0.9355202
+Dinner table conversation with family,Dinner table exchange featuring family,0.873752
+Bicycle bell ringing on busy bike path,Bicycle bell ringing across bustling bike path,0.9271207
+Water boiling in a kettle whistling,Water boiling within a kettle whistling,0.9606166
+Rhythmic printing press in operation,Rhythmic printing press in operation,0.99999994
+Mountain stream with occasional fish jumps,Mountain brook including infrequent fish jumps,0.8667402
+Playground swings creaking back and forth,Playground swings squeaking back also forth,0.880234
+Typing on old mechanical typewriter,Typing across old mechanical typewriter,0.9284934
+Ice skates carving across frozen pond,Ice skates carving across frozen pond,1.0
+Blacksmith hammering and quenching hot metal,Blacksmith hammering as well as quenching hot metal,0.93662393
+Baby giggling during peek-a-boo game,Baby giggling amid peek-a-boo game,0.9601578
+Geese honking as they fly overhead,Geese honking as they fly overhead,0.99999994
+Old film projector running in cinema,Old film projector sprinting amid cinema,0.8782145
+Cave with water droplets and distant echoes,Cave together with water droplets in addition to distant echoes,0.8283633
+Cash register drawer opening with bell,Cash register drawer opening with bell,1.0
+Ancient temple with wind through stone corridors,Ancient temple with draft amidst stone corridors,0.84820557
+Helicopter hovering overhead,Copter hovering up high,0.8221344
+Whale songs in deep ocean,Whale songs in bottomless briny deep,0.78660285
+Wind chimes in gentle summer breeze,Draft chimes during soothing summer breeze,0.8549075
+Busy fish market with vendors calling,Lively fish exchange together with vendors calling,0.72694755
+Analog synthesizer creating sci-fi atmosphere,Analog synthesizer creating sci-fi atmosphere,1.0000002
+Walking through dense forest undergrowth,Walking by way of dense copse undergrowth,0.8522384
+Stadium crowd doing the wave at sporting event,Stadium crowd doing the wave at sporting event,1.0
+Crackling logs in stone fireplace during winter,Sizzling logs amid stone fireplace for the duration of winter,0.8318846
+Subway train arriving at station with announcement,Subway metro arriving amid station with announcement,0.88622636
+Antique pocket watch ticking mechanism,Antique pocket watch ticking mechanism,1.0
+Cat purring and kneading on blanket,Cat purring alongside kneading across blanket,0.90854263
+Basketball game with squeaking shoes and bouncing ball,Basketball game with squeaking shoes together with bouncing ball,0.94763976
+Wind rushing through canyon walls,Breeze rushing across canyon walls,0.84005195
+Old fashioned typewriter with bell at end of line,Antique fashioned typewriter plus bell for end of line,0.8763689
+Beehive buzzing with activity,Beehive humming including activity,0.8396491
+Grandfather clock pendulum swinging,Grandfather chronometer pendulum swinging,0.94541395
+Marching band playing in parade,Marching band engaging in parade,0.93669343
+Bowling alley ambient sounds,Bowling alley ambient sounds,1.0
+Birds taking flight suddenly from trees,Ornithes taking flight suddenly from trees,0.7945224
+Video arcade from the 1980s,Video arcade from the 1980s,1.0
+Horse galloping across open field,Horse galloping across open field,1.0000001
+Rain on windshield with wipers running,Rain atop windshield plus wipers jogging,0.7173687
+Electric guitar with heavy distortion solo,Electric guitar with heavy distortion solo,1.0
+Bonfire crackling at beach party,Bonfire popping in the course of beach party,0.75565577
+Heavy footsteps in empty hallway at night,Heavy footsteps during empty hallway amid night,0.9169377
+Carnival merry-go-round music and laughter,Carnival merry-go-round music and laughter,0.99999994
+Fox barking in moonlit forest,Fox barking amid moonlit woods,0.93791497
+Helicopter rescue operation in mountains,Copter rescue operation amid mountains,0.87493694
+Chopping wood for winter fireplace,Chopping wood for winter fireplace,1.0000001
+Tennis match with grunts and ball hits,Tennis match with grunts and ball hits,0.9999999
+Haunted house with ghostly whispers,Haunted home featuring ghostly whispers,0.926667
+Old west saloon piano playing ragtime,Aged west saloon piano playing ragtime,0.9454398
+Sand timer with grains falling slowly,Sand timer together with grains falling slowly,0.9549529
+Bubbling scientific experiment in laboratory,Bubbling scientific experiment in laboratory,1.0
+Bat echolocation sounds in cave,Bat echolocation sounds during cave,0.9602891
+Monks chanting in Tibetan monastery,Monks chanting in Tibetan monastery,0.9999999
+Vinyl record crackle before jazz music,Vinyl record crackle before jazz music,1.0
+Soccer stadium with chanting fans,Soccer stadium together with chanting fans,0.95178217
+Thunderstorm with heavy rain on roof,Thunderstorm together with prominent downpour covering covering,0.79636055
+Ice cracking on frozen lake in spring,Ice cracking on frozen lake throughout spring,0.9524706
+Cash register ringing up sales,Cash register bonging up sales,0.82635295
+Heart monitor beeping in hospital room,Heart monitor beeping within hospital room,0.96669567
+Howling blizzard around mountain cabin,Howling blizzard around mountain cabin,1.0
+Frying eggs on hot skillet,Frying eggs covering hot skillet,0.9189843
+Bowling ball rolling down lane and hitting pins,Bowling ball rolling down lane coupled with hitting pins,0.9604173
+Traditional Japanese tea ceremony,Traditional Japanese tea ceremony,1.0
+Horse-drawn carriage on country road,Horse-drawn carriage on country road,0.99999994
+Bubbling creek with birds chirping,Bubbling creek alongside ornithes chirping,0.8657644
+Mechanical pocket watch ticking,Mechanical pocket watch tocking,0.86091405
+Ancient stone door grinding open,Ancient stone door grinding open,1.0
+Coffee percolator bubbling on stove,Coffee percolator bubbling over stove,0.9673226
+Ambient sounds of tropical rainforest,Ambient sounds of tropical rainforest,1.0
+Phone ringing in empty office building,Smartphone ringing in empty office edifice,0.7610235
+Crackling fire with storyteller speaking,Crinkling fire with storyteller speaking,0.9174967
+Orchestra tuning instruments before concert,Orchestra tuning instruments in advance of concert,0.8923283
+Dog barking at mailman approaching,Dog barking in the course of mailman approaching,0.875039
+Popcorn popping in kettle,Popcorn popping in kettle,1.0
+Drawbridge mechanism raising with chains,Drawbridge mechanism raising with chains,1.0
+Morning in countryside with rooster crowing,Morning in countryside with rooster crowing,1.0
+Theremin playing eerie melody,Theremin frolicking eerie melody,0.87275434
+Indoor swimming pool echoes and splashes,Indoor swimming pool echoes coupled with splashes,0.9075203
+Horses pulling stagecoach on dirt road,Horses pulling stagecoach above dirt road,0.97186655
+Crackling static on old radio,Spitting static on historic radio,0.78092295
+Birds chirping in spring garden,Birds chirping within spring garden,0.9717394
+Thunderstorm approaching with distant rumbles,Squall approaching featuring faint rumbles,0.88117605
+Blacksmith forge with hammer and bellows,Blacksmith forge with hammer as well as bellows,0.9387464
+Summer rain on garden leaves,Summer shower above garden leaf cover,0.81843984
+Church bells ringing across village,Church bells ringing across village,1.0000001
+Carousel music at night carnival,Carousel music while night carnival,0.9458919
+Casino slot machines and ambient chatter,Casino slot machines in addition to ambient chatter,0.8997861
+Cat purring by crackling fireplace,Cat purring by snapping fireplace,0.9124171
+Chainsaw cutting through fallen tree,Chainsaw cutting through fallen tree,1.0
+Chalk writing on blackboard in quiet classroom,Chalk writing over blackboard in quiet classroom,0.9771182
+Champagne cork popping at celebration,Champagne cork popping at celebration,1.0
+Children jumping in pile of autumn leaves,Minors jumping amid pile of autumn foliage,0.8552071
+Christmas morning with paper unwrapping,Christmas morning plus paper unwrapping,0.9449974
+Cicadas singing on hot summer evening,Cicadas singing on hot summer evening,1.0000001
+Circus performance with crowd reactions,Circus performance alongside multitude reactions,0.8302715
+Classical string quartet in marble hall,Classical string quartet throughout marble hall,0.93980503
+Classroom with teacher and student interactions,Classroom plus teacher and student interactions,0.9421784
+Clock tower striking noon over city square,Timer tower striking noon over municipality square,0.8580427
+Closing metal vault door with echo,Closing metal vault door with echo,1.0
+Coffee shop ambient noise with espresso machine,Coffee shop ambient noise with espresso appliance,0.96151716
+Cold winter wind whistling through bare trees,Cold winter wind whistling through bare trees,1.0
+Computer server room with fans and hard drives,Processor server room together with fans alongside hard drives,0.84927523
+Concert hall audience applauding,Concert hall audience applauding,1.0
+Construction site with jackhammer and crane,Construction site accompanied by jackhammer coupled with crane,0.8697339
+Cooking bacon in cast iron skillet,Cooking bacon amidst cast iron skillet,0.89892304
+Coral reef underwater with bubbles and fish,Coral reef underwater with bubbles plus fish,0.95716596
+Corks popping at wine tasting event,Corks popping during wine tasting event,0.97303426
+Country creek with frogs and crickets,Country creek comprising frogs coupled with crickets,0.8814163
+Cow mooing in barn with hay rustling,Cow mooing amidst barn with hay swishing,0.92402613
+Crackling campfire with owl hooting,Crackling campfire plus owl hooting,0.95395803
+Crackling ice in glass of whiskey,Crackling ice among glass of whiskey,0.93352365
+Creaking door in abandoned mansion,Squealing door within forsaken mansion,0.79459584
+Creaking floors in old Victorian house,Creaking floors in archaic Victorian habitat,0.86084163
+Creaking rocking chair on wooden porch,Creaking rocking chair over wooden porch,0.9711317
+Cricket match with bat hits and commentary,Cricket match alongside bat hits in addition to commentary,0.80477715
+Crickets chirping on summer evening,Crickets calling over summer evening,0.85028434
+Crowd cheering at football touchdown,Multitude cheering for football touchdown,0.8177457
+Crowd murmuring before theater performance,Crowd murmuring in advance of theater performance,0.9436645
+Crying baby gradually calming down,Crying baby steadily calming down,0.95670116
+Crystal glasses clinking in toast,Crystal glasses clinking in toast,0.99999994
+Cuckoo clock announcing noon,Cuckoo horologe announcing noon,0.81372285
+Dance club with electronic music and crowd,Dance club with electronic music as well as crowd,0.939384
+Deep space ambient with occasional transmission,Strong space ambient together with rare transmission,0.7745725
+Desert wind through canyon with hawk cry,Desert wind amidst canyon with hawk cry,0.9197897
+Dice rolling across wooden table in game,Dice rolling across wooden table amid game,0.9336254
+Diesel train engine idling at station,Diesel railway engine idling when station,0.9018252
+Digital alarm clock beeping persistently,Digital siren timekeeping device beeping persistently,0.88326275
+Dining hall with silverware and conversation,Dining hall with silverware and conversation,1.0
+Dinner party with laughter and glasses clinking,Dinner party accompanied by guffaws together with glasses clinking,0.8342947
+Distant ambulance siren approaching,Detached ambulance siren approaching,0.81015396
+Distant avalanche in mountain range,Distant avalanche in mountain range,0.9999998
+Distant carnival sounds across night field,Faint carnival sounds across night field,0.8359385
+Distant church bells on Sunday morning,Isolated church bells on Sunday morning,0.85282993
+Distant factory whistle signaling end of shift,Faint factory whistle signaling end of shift,0.864335
+Distant fireworks on fourth of July,Distant fireworks covering fourth of July,0.95660824
+Distant foghorn on misty harbor,Distant foghorn upon misty harbor,0.97691315
+Distant gunfire on battlefield,Far-off gunfire over battlefield,0.8026207
+Distant helicopter approaching gradually,Remote helo approaching progressively,0.6424047
+Distant thunder during light rain,Isolated rumble in the course of faint rain,0.6319799
+Distant train whistle across prairie,Distant train whistle across prairie,0.99999994
+Distant volcano rumbling before eruption,Remote volcano rumbling earlier than eruption,0.8452609
+Diving into swimming pool with underwater sounds,Diving moving to swimming pool together with underwater sounds,0.9224658
+Dog barking excitedly at squirrel,Dog barking excitedly at squirrel,1.0
+Dog panting after playing fetch,Dog panting post performing fetch,0.8241592
+Dog shaking water off after swimming,Dog shaking water off after swimming,0.9999998
+Dogs playing and wrestling on grass,Dogs playing as well as wrestling covering grass,0.85206866
+Dolphins clicking and whistling underwater,Dolphins clicking and whistling underwater,1.0
+Door creaking open in haunted house,Door cracking open within haunted dwelling,0.8842702
+Drawbridge mechanisms raising with chains,Drawbridge mechanisms raising plus chains,0.92113036
+Dripping faucet in quiet bathroom,Dripping faucet in still bathroom,0.9243317
+Dripping water in cave with echoes,Dripping water inside cave with echoes,0.96670246
+Drone of airplane engines during flight,Drone of airplane engines in the course of flight,0.83018017
+Dropping ice cubes into glass,Dropping ice cubes heading to glass,0.8720087
+Drum circle in public park,Drum circle in public park,1.0
+Drumming fingers on wooden table,Drumming fingers over wooden table,0.95659894
+Duck quacking at pond edge,Duck quacking throughout pond edge,0.95398986
+Ducks landing on pond with water splashes,Ducks landing covering pond with water splashes,0.9574876
+Electric fan oscillating in quiet room,Electric fan oscillating during muted room,0.8964568
+Electric guitar being tuned,Electric guitar being tuned,1.0
+Electric saw cutting wood,Electric saw cutting wood,0.9999999
+Electric shaver buzzing,Electric shaver buzzing,1.0
+Electric toothbrush running,Electric toothbrush sprinting,0.7678422
+Electronic cash register scanning items,Electronic cash register scanning items,1.0000002
+Electronic door lock with keypad beeps,Electronic door lock with keypad beeps,0.99999994
+Electronic music with synthetic beats,Electronic music with synthetic beats,1.0
+Elevator arriving with bell and doors opening,Elevator arriving with bell also doors opening,0.94691265
+Elevator music in department store,Elevator music in department store,1.0000001
+Empty concert hall with distant piano notes,Empty concert hall including remote piano notes,0.8866258
+Empty playground swings creaking in wind,Empty playground swings squealing among zephyr,0.81567013
+Engine room of large ship at sea,Engine room of large ship at sea,1.0
+Espresso machine steaming milk,Espresso device steaming milk,0.9375633
+Evening cicadas and crickets in summer,Evening cicadas coupled with crickets inside summer,0.8572773
+Excited dog greeting returning owner,Excited dog greeting returning owner,1.0
+Explosive thunderclap during storm,Explosive thunderclap in the midst of storm,0.8875155
+Factory assembly line with conveyor belt,Factory assembly line featuring conveyor belt,0.9371942
+Falling raindrops on window pane,Falling raindrops upon window pane,0.98035944
+Farm animals waking at dawn,Farm animals waking when dawn,0.955793
+Fast flowing river in mountain gorge,Quick passing channel within mountain gorge,0.81598604
+Fast-paced footsteps running on pavement,Fast-paced footsteps running across pavement,0.9693984
+Fax machine sending document,Fax contrivance sending document,0.81387466
+Ferris wheel at night carnival,Ferris wheel during night carnival,0.95078593
+Field of wheat rustling in breeze,Field of wheat crinkling among breeze,0.914615
+Film projector running in empty theater,Film projector running in empty theater,1.0
+Finale of fireworks display,Finale of fireworks display,1.0
+Fire alarm ringing in building,Fire warning clanging throughout establishment,0.80543125
+Fire truck siren approaching emergency,Fire truck siren approaching emergency,1.0
+Fireplace crackling on winter evening,Fireplace fizzing on winter evening,0.91952837
+Fireworks exploding in celebration,Fireworks exploding in celebration,1.0
+Fish tank bubbler and filter running,Fish tank bubbler coupled with filter running,0.93617916
+Fishing boat diesel engine idling,Fishing boat diesel engine idling,1.0
+Fishing line casting and reel spinning,Fishing line casting alongside reel spinning,0.9411976
+Fitness class with instructor and music,Fitness class with instructor coupled with music,0.93070376
+Fizzing soda being poured into glass,Fizzing soda being poured into glass,1.0000001
+Flamenco dancers with castanets and footwork,Flamenco dancers featuring castanets alongside footwork,0.95547295
+Flashbulbs popping at press conference,Flashbulbs popping throughout press conference,0.9330288
+Flipping through pages of newspaper,Flipping through pages of newspaper,1.0000001
+Flowing river with rushing rapids,Flowing river plus rushing rapids,0.9376359
+Flute playing solo melody in empty hall,Flute playing solo melody amidst empty hall,0.92929435
+Flying insects buzzing around porch light,Winging insects buzzing around porch light,0.9609126
+Fog horn blowing in harbor mist,Fog horn blowing amid harbor mist,0.9703969
+Footsteps approaching on wooden floor,Footsteps approaching over wooden floor,0.95255923
+Footsteps crunching in fresh snow,Paces crunching inside fresh snow,0.81519055
+Footsteps echoing in empty corridor,Paces echoing amidst empty corridor,0.81408703
+Footsteps in dry autumn leaves,Steps among dry autumn fronds,0.7625944
+Footsteps on gravel path in garden,Footsteps on gravel path in garden,0.99999994
+Footsteps running up wooden staircase,Stride sounds running up wooden staircase,0.7861222
+Forest after rainfall with dripping leaves,Woodland after rainfall accompanied by dripping leaves,0.88412195
+Forest at dusk with owl hooting,Forest while dusk with owl hooting,0.9593293
+Forest fire crackling through underbrush,Copse fire crinkling through underbrush,0.8138087
+Formula 1 race cars passing by,Formula 1 race cars passing by,1.0
+Fox hunting horn across autumn field,Fox hunting horn across autumn field,1.0
+Freezer door opening with frost cracking,Freezer door opening with frost cracking,1.0
+French cafe with accordion music,French cafe featuring accordion music,0.9404404
+Frog chorus at pond edge at twilight,Frog chorus at pond edge in the course of twilight,0.9392261
+Frontier town with horses and wagon,Frontier town plus horses coupled with wagon,0.8302505
+Frying bacon in pan with sizzling,Frying bacon in pan accompanied by sizzling,0.9423399
+Funeral procession with solemn music,Funeral procession plus solemn music,0.94796586
+Furious thunderstorm with heavy rain,Furious downpour accompanied by massive rain,0.8056864
+Futuristic city with flying vehicles,Futuristic urban area including soaring vehicles,0.83881974
+Futuristic computer interface with beeps,Futuristic PC interface comprising beeps,0.92705345
+Galloping horse across open meadow,Galloping horse across open meadow,0.9999999
+Game show audience applauding answer,Game show audience applauding answer,1.0
+Garage door opening automatically,Garage door opening automatically,1.0
+Garden party with conversations and music,Garden party with conversations coupled with music,0.933987
+Gas stove burner igniting,Gas stove burner igniting,1.0
+Geese honking during migration,Geese honking during migration,1.0
+Gentle brook in forest clearing,Soft brook amid forest clearing,0.89491236
+Gentle ocean waves on sandy beach,Tranquil maritime domain billows on sandy beach,0.647082
+Gentle rain on tent while camping,Gentle drizzle over tent while camping,0.91823465
+Gentle stream flowing through meadow,Soft rill moving across meadow,0.7717082
+Gentle wind through pine forest,Gentle zephyr amidst pine woods,0.71554196
+Ghost town with wind through empty buildings,Ghost town including zephyr through empty buildings,0.8243128
+Glass breaking in slow motion,Glass breaking in deliberate motion,0.8907758
+Glass shattering on hard floor,Glass shattering upon hard floor,0.9708554
+Glassblower working with molten glass,Glassblower working together with molten glass,0.96407413
+Glasses clinking in celebration toast,Glasses clinking within celebration toast,0.9495746
+Grandfather clock striking midnight,Grandfather timepiece striking midnight,0.8615677
+Grasshoppers chirping in summer field,Grasshoppers calling in summer field,0.9153796
+Gravel crunching under car tires,Gravel crunching under auto tires,0.9661589
+Group meditation with ohm chanting,Group meditation together with ohm chanting,0.9734472
+Guitar being carefully tuned,Guitar being carefully tuned,1.0
+Gull cries over harbor with boat bells,Gull cries over harbor together with boat bells,0.9727809
+Gym workout with weights and breathing,Gym workout including weights coupled with respiration,0.90944076
+Hair dryer running on high setting,Hair dryer running upon high setting,0.9364835
+Halloween party with monster sounds,Halloween party featuring monster sounds,0.9392445
+Hammer hitting nail into wood,Hammer hitting nail into wood,1.0
+Hammock swinging with rope creaking,Hammock swinging featuring rope moaning,0.87087125
+Hand cranked ice cream maker,Hand cranked ice cream maker,1.0
+Hand washing dishes in sink,Hand washing dishes in sink,0.9999999
+Harbor with boat horns and gulls,Harbor accompanied by boat blares and gulls,0.9014472
+Harp glissando in concert hall,Harp glissando inside concert hall,0.9693116
+Haunted house attraction with screams,Haunted home attraction plus screams,0.90700996
+Haunting violin solo in empty church,Haunting violin solo in empty church,1.0
+Heavy rain hitting window panes,Intense cloudburst hitting window panes,0.7501352
+Heavy rain on canvas tent,Prominent downpour on canvas tent,0.79961234
+Heavy snowfall with muffled city sounds,Substantial snowfall with muffled municipality sounds,0.9057485
+Heavy storm with wind and rain,Heavy storm comprising zephyr and precipitation,0.769247
+Helicopter blades whirring overhead,Copter blades whirring overhead,0.94529414
+Hens clucking in chicken coop,Hens clucking during chicken coop,0.9689645
+High heel shoes walking on marble floor,High heel shoes strolling against marble floor,0.9328797
+High mountain wind through rocky peaks,High mountain breeze along rocky peaks,0.937001
+High school band practicing in distance,High school band practicing within distance,0.9376639
+High school hallway between classes,High school hallway between classes,1.0
+High speed train passing by station,High speed train passing by station,1.0
+Highway traffic from pedestrian bridge,Highway motorists from pedestrian bridge,0.89699334
+Hiking boots on rocky mountain trail,Hiking boots covering rocky mountain trail,0.9590688
+Hockey game with stick slaps and crowd,Hockey game alongside stick slaps plus congregation,0.8520457
+Home printer scanning and printing,Home printer scanning in addition to printing,0.80277747
+Horse carriage on cobblestone street,Horse carriage over cobblestone pathway,0.92652774
+Horse galloping across open field,Horse galloping across open field,1.0000001
+Horse neighing and stomping in stable,Horse neighing and stomping amid stable,0.96116847
+Horse trotting on dirt path,Horse trotting on dirt path,1.0
+Hospital corridor at night with occasional pages,Hospital corridor amid night together with occasional pages,0.8603699
+Hot air balloon burner firing,Hot air balloon burner firing,1.0
+Hotel lobby with quiet piano music,Hotel lobby alongside subdued piano music,0.81379414
+House construction with hammering and sawing,Habitat construction with hammering as well as sawing,0.86901814
+Hovercraft engine and water spray,Hovercraft propulsion system and water spray,0.89124644
+Howling wind during winter blizzard,Howling wind in the midst of winter blizzard,0.8956403
+Humming refrigerator in quiet kitchen,Whirring refrigerator amidst quiet kitchen,0.76512384
+Hushed museum gallery with occasional whispers,Hushed museum gallery with irregular whispers,0.93684125
+Hydraulic press crushing objects,Hydraulic press crushing objects,1.0000001
+Ice cream truck melody in suburb,Ice cream truck melody in suburb,0.99999994
+Ice cracking on frozen lake,Ice cracking covering frozen lake,0.9379798
+Ice cubes being dropped into glass,Ice cubes being dropped en route to glass,0.8900651
+Ice hockey puck and stick impacts,Ice hockey puck and stick impacts,1.0
+Ice skating rink with blades on ice,Ice skating rink comprising blades against ice,0.9017878
+Icicles melting and dripping,Icicles melting in addition to dripping,0.8760448
+Industrial elevator machinery operating,Industrial elevator machinery operating,1.0
+Industrial factory with machinery running,Industrial factory comprising machinery dashing,0.7964441
+Inside car during heavy rainstorm,Inside car over the course of prominent rainstorm,0.76791626
+Inside medieval blacksmith shop,Inside medieval blacksmith shop,1.0000001
+Inside moving elevator with mechanical sounds,Inside moving elevator alongside mechanical sounds,0.9209197
+Inside submarine with sonar pings,Inside submarine with sonar pings,0.9999999
+Inside tent during rainstorm,Inside tent while rainstorm,0.94732344
+Jazz club with saxophone solo,Jazz club featuring saxophone solo,0.96670794
+Jet airliner taking off nearby,Jet airliner taking off nearby,1.0
+Jet ski racing across water,Jet ski racing across water,0.99999994
+Jewelry box with ballerina turning,Jewelry box together with ballerina turning,0.9380066
+Jungle at night with exotic animal sounds,Jungle at night with exotic animal sounds,1.0
+Kettle beginning to whistle on stove,Kettle beginning to whistle upon stove,0.95335615
+Key turning in old door lock,Key turning throughout old door lock,0.92418873
+Keyboard typing with mechanical switches,Key set typing including mechanical switches,0.8532522
+Kids playing in swimming pool,Kids working amid swimming pool,0.88506675
+Kitchen during busy dinner preparation,Kitchen throughout busy dinner preparation,0.9454874
+Kitten meowing for attention,Kitten meowing for attention,1.0
+Knitting needles clicking together,Knitting needles clicking together,1.0
+Lake waves lapping against dock,Lake waves lapping against dock,0.9999999
+Large audience applauding performance,Large audience applauding performance,0.99999994
+Large cathedral with echoing footsteps,Large cathedral with echoing treads,0.8968996
+Large crowd chanting at protest,Large assembly chanting amid protest,0.8960017
+Large crowd singing national anthem,Large throng singing national anthem,0.9016028
+Large grandfather clock ticking,Large grandfather chronometer tocking,0.7918932
+Large industrial fan in warehouse,Large industrial fan during warehouse,0.91094077
+Large metal gate closing and locking,Large metal gate closing alongside locking,0.91874385
+Large office with typing and phones,Large office with typing also phones,0.9051859
+Large waves crashing on rocky shore,Large tides smashing covering rocky shore,0.8876539
+Laser printer printing document,Laser printer printing document,1.0
+Laundromat with washing machines running,Laundromat including washing machines dashing,0.85151094
+Lawn mower running in suburban yard,Lawn mower sprinting amidst suburban yard,0.8409976
+Lawn sprinklers running in morning,Lawn sprinklers running in morning,0.99999994
+Leaves rustling in autumn breeze,Leaves rustling in autumn breeze,1.0
+Library with occasional page turning,Library accompanied by occasional page turning,0.8890624
+Light aircraft engine starting,Faint aircraft powerplant starting,0.6133139
+Light rain falling on calm lake,Delicate precipitation falling on calm lake,0.8602692
+Light rain on greenhouse roof,Mild rainfall upon greenhouse shelter,0.805368
+Lightning strike with immediate thunder,Lightning strike with immediate thunderclap,0.8864713
+Lions roaring in savanna distance,Lions roaring in savanna distance,1.0
+Live auction with fast-talking auctioneer,Live auction featuring fast-talking auctioneer,0.95475453
+Loading dock with trucks and forklifts,Loading dock featuring trucks alongside forklifts,0.94684255
+Locomotive steam engine starting,Locomotive steam engine starting,1.0
+Log cabin fireplace crackling in winter,Log cabin fireplace spitting in winter,0.9173141
+Logging operation with chainsaws,Logging operation with chainsaws,0.99999994
+Loom weaving fabric in textile mill,Loom weaving fabric within textile mill,0.9620317
+Lullaby music box playing slowly,Lullaby music box engaging slowly,0.9571212
+Lumber being cut at sawmill,Lumber being cut at sawmill,1.0000001
+Machine gun firing rapidly,Appliance gun firing rapidly,0.9002063
+Magic spell casting with mystical sounds,Magic spell casting accompanied by mystical sounds,0.92876995
+Magical forest with ethereal sounds,Magical forest together with ethereal sounds,0.94360363
+Magician performing with audience gasps,Magician performing including audience gasps,0.95582825
+Mail slot with letters dropping through,Mail slot accompanied by letters dropping amidst,0.6777482
+Market square with vendors calling,Mall square including vendors calling,0.8449325
+Martial arts training session,Martial arts training session,1.0
+Match being struck and lighting,Match being struck also lighting,0.8927997
+Mechanical clock winding up,Mechanical timer winding up,0.8701097
+Mechanical metronome ticking steadily,Mechanical metronome pulsing steadily,0.90705436
+Mechanical toy robot walking,Mechanical toy robot treading,0.9352918
+Meditative singing bowl being struck,Meditative singing bowl being struck,1.0000001
+Melting ice cream dripping on hot day,Melting ice cream dripping above hot day,0.924952
+Metal detector beeping at treasure,Metal detector beeping amid treasure,0.92942685
+Metal gate squeaking open slowly,Metal gate squeaking open slowly,1.0000001
+Metal workshop with grinding and welding,Metal workshop alongside grinding and welding,0.92940956
+Metronome ticking at moderate tempo,Metronome marking time at moderate tempo,0.86314857
+Microwave oven running and beeping,Microwave oven speeding and beeping,0.9590323
+Military boots marching in formation,Military boots marching throughout formation,0.93156433
+Military jet flying overhead,Military jet winging aloft,0.73698425
+Military parade with marching band,Military parade alongside marching band,0.9582245
+Milk being poured into cereal bowl,Milk being poured in the direction of cereal bowl,0.87899834
+Mining operation with drilling,Mining operation with drilling,1.0
+Misty mountain forest at dawn,Misty mountain forest while dawn,0.95142806
+Mixing cocktail in shaker,Mixing cocktail amid shaker,0.9049371
+Mobile phone vibrating on wooden table,Mobile communicator vibrating against wooden table,0.84578854
+Model train set running on tracks,Model metro set running on tracks,0.92268217
+Modern art gallery with hushed voices,Modern art gallery with hushed voices,1.0
+Modern office with computers and phones,Modern office with computers and phones,1.0
+Monastery bells calling to prayer,Monastery bells calling to prayer,0.9999999
+Monday morning construction site,Monday morning construction site,1.0
+Monkey chattering in rainforest,Monkey chattering within rainforest,0.97113717
+Monorail train passing overhead,Monorail express passing up high,0.8172307
+Morning birdsong in spring garden,Morning birdsong within spring garden,0.9511558
+Morning coffee brewing in machine,Morning coffee brewing among equipment,0.88461745
+Morning commute on busy highway,Morning commute above lively highway,0.8573693
+Morning in countryside farmyard,Morning amidst countryside farmyard,0.8863282
+Morning in suburbs with paper delivery,Morning during suburbs featuring paper delivery,0.9026513
+Morse code being tapped out,Morse code being tapped out,1.0
+Mosquito buzzing near ear at night,Mosquito buzzing near ear while night,0.9651355
+Motorcycle engine starting and idling,Motorcycle engine starting coupled with idling,0.9222162
+Motorcycle passing by with loud engine,Motorcycle passing by with thunderous prime mover,0.8096329
+Mountain avalanche in distance,Mountain avalanche among distance,0.94062287
+Mountain goats on rocky slopes,Mountain goats atop rocky slopes,0.90820384
+Mountain stream with small waterfall,Mountain brook with small plunge,0.8303555
+Mouse clicking rapidly during gaming,Mouse clicking rapidly in the course of gaming,0.8057703
+Movie theater audience reactions,Movie theater audience reactions,1.0
+Moving box with dishes rattling inside,Moving box including dishes rattling inside,0.9285244
+Multiple alarm clocks ringing,Multiple signal clocks jingling,0.84159935
+Museum with hushed voices and footsteps,Museum with hushed voices coupled with footsteps,0.9437504
+Music box playing gentle lullaby,Music box engaging soft lullaby,0.94346356
+Musical saw being played hauntingly,Musical saw being played hauntingly,1.0
+Nail gun firing into wood repeatedly,Nail gun firing into wood repeatedly,1.0
+Native American drumming ceremony,Native American drumming ceremony,1.0
+Nature documentary narrator voice,Nature documentary narrator voice,1.0
+Neon sign buzzing in rainy night,Neon sign resonating in rainy night,0.9205959
+Night club with DJ and dancing crowd,Night club including DJ and dancing congregation,0.9246446
+Night insects in summer garden,Night insects amidst summer garden,0.8685638
+Night market with food vendors,Night emporium featuring food vendors,0.8353783
+Night sounds of desert with coyotes,Night sounds of desert with coyotes,1.0
+Night train passing through countryside,Night transit vehicle passing along countryside,0.86559886
+Nightingale singing in moonlit garden,Nightingale singing among moonlit garden,0.9731622
+Nighttime city ambience with distant sirens,Nighttime metropolis ambience including isolated sirens,0.90696883
+Nighttime forest with cricket chorus,Nighttime forest with cricket chorus,1.0
+Nighttime jungle with exotic creatures,Nighttime jungle accompanied by exotic creatures,0.91606843
+Nighttime ocean waves on beach,Nighttime ocean swells on waterfront,0.8303951
+Nighttime thunderstorm approaching,Nighttime electrical storm approaching,0.9319794
+Noisy restaurant kitchen during service,Noisy food venue kitchen while service,0.89520663
+Nostalgic ice cream truck melody,Nostalgic ice cream truck melody,0.99999994
+Ocean liner horn blasting,Ocean liner horn blasting,1.0
+Ocean waves crashing on rocky coast,Deep surf impacting over rocky coast,0.8428794
+Ocean waves gently lapping sandy shore,Aquatic realm breakers gently lapping sandy shore,0.8171303
+Office cubicle with typing and phones,Office cubicle featuring typing as well as phones,0.90017
+Office paper shredder running,Headquarters paper shredder racing,0.8445268
+Office printer scanning documents,Office printer scanning documents,1.0
+Office workers discussing project,Work environment workers discussing project,0.79236805
+Old boat creaking at dock,Antique boat creaking during dock,0.858541
+Old car engine struggling to start,Vintage transport propellant struggling to start,0.78542876
+Old cash register with mechanical keys,Archaic cash register plus mechanical keys,0.8044641
+Old fashioned popcorn machine popping,Archaic fashioned popcorn apparatus popping,0.73247504
+Old fashioned typewriter with bell,Old fashioned typewriter together with bell,0.9490854
+Old grandfather clock ticking,Vintage grandfather horologe sounding,0.5908102
+Old manual camera shutter clicking,Ancient manual camera shutter clicking,0.90322006
+Old movie film projector running,Old movie film projector racing,0.96038294
+Old music box playing melody,Antique music box playing melody,0.90561
+Old phonograph playing scratchy record,Ancient phonograph playing scratchy record,0.95251286
+Old pocket watch ticking mechanism,Old pocket watch sounding mechanism,0.9281782
+Old radio tuning between stations,Aged radio tuning between stations,0.89114976
+Old school bell ringing,Old school bell ringing,1.0
+Old steam locomotive chugging,Old steam locomotive chugging,1.0
+Old telephone rotary dial spinning,Timeworn telephone rotary dial spinning,0.89628124
+Old western saloon with piano playing,Vintage western saloon together with piano running,0.8655541
+Old windmill creaking in breeze,Old windmill moaning in breeze,0.90257204
+Old wooden boat creaking on water,Ancient wooden boat squeaking atop water,0.76299
+Old wooden floorboards creaking,Ancient wooden wooden floors straining,0.7787333
+Olympic swimming competition with crowd,Olympic swimming competition comprising gathering,0.7991406
+Opening champagne bottle with pop,Opening champagne bottle featuring pop,0.9192674
+Orchestra conductor tapping baton,Orchestra conductor tapping baton,1.0
+Orchestra tuning before performance,Orchestra tuning in front of performance,0.852895
+Organ playing in cathedral,Organ running amidst cathedral,0.7455252
+Outdoor cafe with street musicians,Outdoor cafe with street musicians,0.9999999
+Outdoor concert with applause,Outdoor concert accompanied by applause,0.92233986
+Outdoor festival with multiple sounds,Outdoor festival alongside multiple sounds,0.9326906
+Outdoor market with vendors calling,Outdoor mall with vendors calling,0.92918557
+Outdoor wedding ceremony with vows,Outdoor wedding ceremony featuring vows,0.96717477
+Overflowing bathtub with water splashing,Overflowing bathtub alongside water splashing,0.9350214
+Owl hooting in dark forest,Owl hooting throughout dark arboretum,0.8401383
+Paddling canoe through still water,Paddling canoe amid still water,0.9711611
+Pages turning in large book,Pages turning inside large book,0.9125335
+Paintball game with markers firing,Paintball game including markers firing,0.9489811
+Paper being crumpled into ball,Paper being crumpled toward ball,0.93854254
+Paper being torn slowly,Paper being torn slowly,1.0
+Paper money being counted by hand,Paper money being counted by hand,1.0
+Paper shredder destroying documents,Paper shredder destroying documents,1.0
+Parachute opening during skydive,Parachute opening in the midst of skydive,0.8812267
+Party balloons popping,Party balloons popping,1.0
+Passing cars on wet road after rain,Passing cars on wet road following cloudburst,0.88451123
+Passing subway train underground,Passing public transport locomotive underground,0.81570196
+Peaceful meadow with light breeze,Peaceful meadow together with subtle breeze,0.94556165
+Pen writing on paper in quiet room,Pen writing atop paper throughout subdued room,0.71941257
+Pencil scratching on paper,Pencil scratching upon paper,0.96441674
+Pendulum clock swinging rhythmically,Pendulum timepiece swinging rhythmically,0.8883014
+Person breathing during meditation,Person wind during meditation,0.84952915
+Person drinking through straw,Person drinking amidst straw,0.780481
+Person humming while cooking,Person humming while cooking,1.0
+Person laughing heartily,Person laughing heartily,1.0
+Person snoring loudly,Person snoring loudly,1.0000001
+Person typing on laptop keyboard,Person typing over laptop input mechanism,0.84703076
+Person walking through deep snow,Person pacing through resonant snow,0.6517125
+Person whistling happy tune,Person whistling happy tune,1.0
+Piano being tuned with key hits,Piano being tuned including key hits,0.9269951
+Piano playing gentle melody,Piano playing soft melody,0.84496367
+Pickup truck driving on gravel road,Pickup truck driving over gravel road,0.9616727
+Picnic in park with distant children,Picnic in park including faraway children,0.9079712
+Pigeons cooing in city square,Pigeons cooing throughout cityscape square,0.92035174
+Pinball machine with bells and flippers,Pinball contrivance accompanied by bells alongside flippers,0.76130056
+Pine forest in gentle breeze,Pine arboretum amid subtle breeze,0.70247185
+Ping pong ball bouncing on table,Ping pong ball bouncing across table,0.9807733
+Pirate ship battle with cannons,Pirate ship battle together with cannons,0.95386016
+Pizza restaurant with brick oven,Pizza restaurant comprising brick oven,0.8996022
+Plane taking off from airport runway,Plane taking off from airport runway,0.9999999
+Playground with children playing,Play zone accompanied by children performing,0.78294253
+Plucking guitar strings one by one,Plucking guitar strings one by one,0.99999994
+Pneumatic drill on construction site,Pneumatic drill against construction site,0.96123934
+Police car siren approaching,Police vehicle siren approaching,0.9708594
+Pool balls colliding during game,Pool balls colliding amid game,0.92979825
+Popcorn popping in microwave,Popcorn popping within microwave,0.9501768
+Popping bubble wrap slowly,Popping bubble wrap slowly,0.99999994
+Pouring cereal into empty bowl,Pouring cereal moving to empty bowl,0.88683677
+Pouring champagne into glass,Pouring champagne moving to glass,0.8404753
+Pouring coffee into ceramic mug,Pouring coffee toward ceramic mug,0.8927476
+Pouring rain during thunderstorm,Pouring cloudburst amid thunderstorm,0.82239866
+Pouring rain on tin roof,Pouring shower above metal rooftop,0.7693596
+Prayer bells ringing in temple,Prayer bells ringing inside temple,0.9715403
+Pressure cooker releasing steam,Pressure cooker releasing steam,1.0
+Professional kitchen during service,Professional kitchen in the midst of service,0.6721673
+Public pool with swimmers and echoes,Public pool alongside swimmers also echoes,0.7650675
+Public speaking with microphone feedback,Public speaking alongside microphone feedback,0.9258443
+Pulling cork from wine bottle,Pulling cork from wine bottle,0.9999999
+Puppies playing and barking,Puppies engaging and barking,0.942684
+Purring cat on windowsill,Purring cat covering windowsill,0.8558917
+Quiet bar with jazz playing softly,Barely audible bar with jazz playing softly,0.8383559
+Quiet beach at sunrise with gulls,Quiet beach while sunrise together with gulls,0.9381139
+Quiet bookstore with occasional page turns,Muted bookstore together with periodic page turns,0.79834944
+Quiet coffee shop with light music,Hushed coffee shop comprising light music,0.7501747
+Quiet country church service,Subdued country church service,0.80620813
+Quiet forest after fresh snowfall,Silent forest following fresh snowfall,0.86133933
+Quiet hospital corridor at night,Subdued hospital corridor amid night,0.76050997
+Quiet library with occasional whispers,Quiet library accompanied by intermittent whispers,0.89945376
+Quiet night with cricket sounds,Subdued night with cricket sounds,0.8052628
+Quiet office with keyboard typing,Still headquarters with keyboard typing,0.66610116
+Quiet park with distant children playing,Faint park alongside secluded children working,0.69218785
+Quiet suburban street at night,Faint suburban boulevard in the course of night,0.66021395
+Race cars at starting line revving,Race cars throughout starting line revving,0.9388069
+Racing heartbeat gradually slowing,Racing heart thump gradually slowing,0.8793727
+Radio being tuned between stations,Radio being tuned between stations,1.0
+Radio playing in distant room,Radio playing throughout distant room,0.89695764
+Radio static with occasional voices,Radio static accompanied by irregular voices,0.8209472
+Rain beginning to fall on quiet street,Rain beginning to fall on hushed lane,0.8713384
+Rain falling on autumn leaves,Rain falling on autumn leaves,0.99999994
+Rain falling on car windshield,Rain falling covering car windshield,0.94379175
+Rain falling on metal roof,Rainfall falling atop metal roof,0.835966
+Rain falling on tent while camping,Rain falling against tent while camping,0.9675371
+Rain forest with exotic bird calls,Rainfall woodland featuring exotic bird calls,0.8898548
+Rain gently falling on umbrella,Precipitation gently falling atop umbrella,0.7195944
+Rain increasing from drizzle to downpour,Cloudburst increasing from drizzle to downpour,0.89856505
+Rain on windowpane at night,Rainfall on windowpane in the course of night,0.86792266
+Railroad crossing signal with train,Railroad crossing signal with train,0.9999999
+Railway station with train announcements,Railway station with transit vehicle announcements,0.91715336
+Rapids in wilderness river,Rapids in wilderness river,1.0
+Recording studio with sound checks,Recording studio featuring sound checks,0.9602491
+Refrigerator humming in quiet kitchen,Refrigerator whirring amid still kitchen,0.8279748
+Remote cabin with wind and wildlife,Remote cabin featuring zephyr and wildlife,0.7614211
+Restaurant kitchen during dinner rush,Restaurant kitchen amid dinner rush,0.9105356
+Restless ocean during approaching storm,Restless maritime domain during approaching storm,0.9075015
+Riding horse through shallow creek,Riding horse throughout shallow creek,0.9519193
+Riding lawn mower cutting grass,Riding lawn mower cutting grass,1.0000001
+Riding motorcycle on empty highway,Riding motorcycle on empty highway,0.99999994
+Rifle firing at shooting range,Rifle firing at shooting range,1.0
+River rapids through rocky gorge,Flow rapids through rocky gorge,0.88954407
+Robot servo motors moving precisely,Robot servo motors moving precisely,0.9999999
+Rock concert with cheering crowd,Rock concert with cheering throng,0.8915139
+Rock slide down mountain slope,Rock slide down mountain slope,1.0
+Rocket launch countdown and ignition,Rocket launch countdown as well as ignition,0.8932289
+Rocking chair creaking on porch,Rocking chair grating across porch,0.8837726
+Roller coaster with screaming riders,Roller coaster accompanied by screaming riders,0.9051256
+Roller skating rink with music,Roller skating rink together with music,0.9426836
+Rolling thunder after lightning,Rolling thunder behind lightning,0.9057247
+Rolling thunder approaching storm,Rolling boom approaching storm,0.8807577
+Rollercoaster climbing chain lift,Rollercoaster climbing chain lift,0.99999994
+Roosters crowing at dawn on farm,Roosters crowing throughout dawn upon farm,0.9328188
+Rope swing over lake with splash,Rope swing over lake plus splash,0.96549296
+Rotary phone dialing and ringing,Rotary communicator dialing coupled with bonging,0.7532877
+Rowing boat with oars in water,Rowing boat with oars in water,1.0000001
+Royal fanfare with trumpets,Royal fanfare with trumpets,1.0
+Rugby match with referee whistle,Rugby match with referee whistle,0.99999994
+Running dishwasher cycle,Running dishwasher cycle,1.0000001
+Running on treadmill at gym,Jogging on treadmill at gym,0.88344157
+Running water in bathroom sink,Jogging water inside bathroom sink,0.8178067
+Rushing mountain stream with birds,Rushing mountain run accompanied by ornithes,0.663272
+Rustling paper gift wrapping,Murmuring paper gift wrapping,0.8339802
+Rusty gate swinging in wind,Rusty gate swinging inside wind,0.9507373
+Sailboat with wind in sails,Sailboat with draft in sails,0.95074606
+Sand pouring through hourglass,Sand pouring amidst hourglass,0.8685198
+Sand timer with grains falling,Sand timer with grains falling,0.99999994
+Sandpaper sanding wood surface,Sandpaper sanding wood surface,1.0
+Saxophonist playing in subway tunnel,Saxophonist playing among subway tunnel,0.96616745
+School bell ringing between classes,School bell chiming between classes,0.9639536
+School cafeteria during lunch hour,School cafeteria throughout lunch hour,0.96820843
+School classroom with teacher lesson,School classroom with teacher lesson,1.0000001
+School playground during recess,School play space for the duration of recess,0.8271578
+Scissors cutting through paper,Scissors cutting amid paper,0.9391011
+Scrabble tiles being shuffled,Scrabble tiles being shuffled,1.0
+Scratching record on turntable,Scratching record above turntable,0.93489814
+Scuba diving with breathing apparatus,Scuba diving with respiration apparatus,0.9573585
+Sea gulls calling over harbor,Sea gulls calling over harbor,0.9999999
+Seagulls fighting over food,Seagulls fighting over food,1.0
+Search and rescue helicopter,Search and rescue chopper,0.8421271
+Seashell with ocean sounds,Seashell comprising ocean sounds,0.8786999
+Seaside boardwalk with carnival,Seaside boardwalk accompanied by carnival,0.91549605
+Serene spa with water features,Serene spa featuring water features,0.9674332
+Sewing machine running steadily,Sewing equipment running steadily,0.9185698
+Shaking dice in cup before roll,Shaking dice during cup before roll,0.9323771
+Shaking maracas rhythmically,Shaking maracas rhythmically,1.0000001
+Shamanic drumming ceremony,Shamanic drumming ceremony,1.0
+Sharpening knife on whetstone,Sharpening knife against whetstone,0.96948075
+Sharpening pencil with manual sharpener,Sharpening pencil featuring manual sharpener,0.94634336
+Sheep bleating in field,Sheep bleating among field,0.9359157
+Ship creaking in rough seas,Ship creaking in rough seas,1.0
+Ship foghorn in harbor mist,Ship foghorn throughout harbor mist,0.95094556
+Ship's bell ringing on deck,Ship's bell ringing on deck,0.99999994
+Shopping cart rolling across parking lot,Shopping cart rolling across parking lot,1.0000001
+Shopping mall during holiday season,Shopping mall amid holiday season,0.93159056
+Short circuit with electrical sparks,Short circuit comprising electrical sparks,0.9035785
+Shower running in bathroom,Shower jogging in bathroom,0.7625152
+Shuffling deck of playing cards,Shuffling deck of functioning cards,0.91758645
+Shutting car door firmly,Shutting conveyance door firmly,0.8709754
+Silent forest with occasional twig snap,Silent forest with sporadic twig snap,0.9257872
+Silent library with clock ticking,Silent library alongside timekeeping device pulsing,0.7548219
+Silent movie theater with piano accompaniment,Silent movie theater including piano accompaniment,0.9454894
+Silent night forest with owl hoots,Silent night forest comprising owl hoots,0.96073174
+Silent snowfall in city park,Silent snowfall during city park,0.95241165
+Singing bowl resonating,Singing bowl resonating,0.9999999
+Single cricket chirping at night,Single cricket tweeting while night,0.7994691
+Sizzling fajitas on hot plate,Sizzling fajitas on hot plate,1.0
+Skateboard rolling on pavement,Skateboard rolling above pavement,0.94618034
+Ski lift machinery operating,Ski lift machinery operating,1.0
+Skiing down fresh powder slope,Skiing down fresh powder slope,1.0
+Skydiver falling through air,Skydiver falling through air,1.0000001
+Skywriting airplane overhead,Skywriting airplane overhead,1.0
+Sleepy cat purring by fireplace,Sleepy cat purring by fireplace,1.0000001
+Sleigh bells jingling on horse-drawn sleigh,Sleigh bells jingling against horse-drawn sleigh,0.9755602
+Sliding glass door opening and closing,Sliding glass door opening also closing,0.9336762
+Slot machine spinning and paying out,Slot gadget spinning and paying out,0.9165174
+Slow ticking grandfather clock,Slow marking time grandfather chronometer,0.7669927
+Slow water drip in quiet cave,Leisurely water drip amid still cave,0.79967386
+Small airplane propeller starting,Small airplane propeller starting,1.0000001
+Small boat motor puttering,Small boat motor puttering,1.0000001
+Small creek with water over rocks,Small creek with water over rubble,0.9188819
+Small fountain in garden,Small fountain in garden,0.9999998
+Small stream babbling over rocks,Small run babbling over crags,0.808858
+Small town parade with marching band,Small town parade accompanied by marching band,0.9368134
+Small waves lapping at lake shore,Small surf lapping in the course of lake shore,0.86501276
+Smartphone notification sounds,Smartphone notification sounds,1.0
+Smoke detector battery warning beep,Smoke detector battery warning beep,0.9999999
+Snapping twigs while walking in forest,Snapping twigs while strolling during forest,0.9483405
+Sneakers squeaking on basketball court,Sneakers squeaking atop basketball court,0.927593
+Snoring person in deep sleep,Snoring person in deep sleep,1.0
+Snow blower clearing driveway,Snow blower clearing driveway,1.0
+Snow falling from roof in large chunk,Snow falling from shelter in large chunk,0.94641113
+Snow plow clearing street at night,Snow plow clearing street at night,0.99999994
+Snow shovel scraping sidewalk,Snow shovel scraping sidewalk,1.0
+Soccer ball being kicked in game,Soccer ball being kicked amid game,0.9138082
+Soccer match with referee whistle,Soccer match featuring referee whistle,0.95513153
+Soda fizzing in glass with ice,Soda fizzing within glass together with ice,0.9525366
+Soft wind through autumn leaves,Soft air current via autumn leaves,0.8842286
+Sonar pings in submarine,Sonar pings throughout submarine,0.918193
+Sorting coins into metal container,Sorting coins into metal container,1.0
+Space shuttle launch sequence,Space shuttle launch sequence,1.0
+Spaceship engine room ambience,Spaceship motor room ambience,0.93299794
+Sparkling wine cork popping,Sparkling wine cork popping,1.0
+Sparks from welder's torch,Sparks from welder's torch,1.0
+Speaking through walkie talkie with static,Speaking across walkie talkie featuring static,0.90911114
+Splashing in puddles with boots,Splashing inside puddles including boots,0.88604975
+Splashing water in bathtub,Splashing water during bathtub,0.9199079
+Splitting firewood with axe,Splitting firewood including axe,0.9356388
+Sports arena with cheering crowd,Sports arena alongside cheering congregation,0.8719775
+Sports car engine revving,Sports conveyance driving force revving,0.75145227
+Spring peeper frogs chorus,Spring peeper frogs chorus,1.0000001
+Squeaky door hinge opening slowly,Squeaky door hinge opening slowly,1.0
+Squeaky floorboard in old house,Squeaky floorboard amidst antique house,0.8066869
+Squeaky toy being repeatedly pressed,Squeaky toy being repeatedly pressed,0.99999994
+Squirrels chattering in trees,Squirrels chattering amid trees,0.9761838
+Stadium crowd doing the wave,Stadium horde doing the wave,0.73233473
+Stadium crowd singing team song,Stadium throng singing team song,0.8653332
+Stage curtain rising with mechanical sound,Stage curtain rising including mechanical sound,0.9328935
+Stampeding cattle herd,Stampeding cattle herd,1.0
+Starting car engine on cold morning,Starting automobile motor upon cold morning,0.89092755
+Starting lawn mower engine,Starting lawn mower driving force,0.87663424
+Steam engine train departing station,Steam engine transit vehicle departing station,0.89826185
+Steam escaping pressure cooker valve,Steam escaping pressure cooker valve,1.0
+Steam hissing from old radiator,Steam hissing from old radiator,1.0
+Steam locomotive chugging along tracks,Steam locomotive chugging along tracks,1.0
+Steam rising from hot springs,Steam rising from hot springs,1.0000001
+Steam train whistle in distance,Steam train whistle inside distance,0.9161196
+Steaming kettle beginning to whistle,Steaming kettle beginning to whistle,0.99999994
+Steel drums playing Caribbean music,Steel drums working Caribbean music,0.94663113
+Steel factory with molten metal pouring,Steel factory including molten metal pouring,0.95500684
+Stethoscope hearing steady heartbeat,Stethoscope hearing steady cardiac rhythm,0.95743257
+Stock market trading floor shouting,Stock trading place trading floor shouting,0.92297035
+Stone skipping across calm lake,Stone skipping across calm lake,1.0
+Storm with heavy rain and thunder,Storm featuring powerful rain coupled with thunder,0.8379127
+Storyteller by campfire with crackling,Storyteller by fire pit accompanied by sparking,0.83885014
+Street busker playing accordion,Street busker playing accordion,1.0
+Street cafe with distant conversations,Thoroughfare cafe with far-off conversations,0.66855246
+Street construction with jackhammer,Avenue construction featuring jackhammer,0.8269743
+Street market with vendors calling,Route market comprising vendors calling,0.76751757
+Street musician playing violin,Boulevard musician operating violin,0.7890305
+Street performer tap dancing,Road performer tap dancing,0.92518044
+Street protest with chanting crowd,Avenue protest accompanied by chanting mass,0.83538437
+Street sweeper cleaning early morning roads,Route sweeper cleaning early morning roads,0.95011467
+String quartet playing classical music,String quartet frolicking classical music,0.7940673
+Subway announcement over speakers,Public transport announcement over speakers,0.79815185
+Subway station with approaching train,Subway station featuring approaching train,0.95122194
+Subway train passing through station,Metro express passing across station,0.8297897
+Summer afternoon thunderstorm approaching,Summer afternoon deluge approaching,0.81367695
+Summer carnival with rides and games,Summer carnival comprising rides alongside games,0.89347553
+Summer insects buzzing in field,Summer insects murmuring in field,0.91011655
+Summer night with crickets and frogs,Summer night with crickets alongside frogs,0.94564945
+Summer rainstorm with distant thunder,Summer rainstorm with distant thunder,1.0
+Sunday church bells across town,Sunday church bells across town,1.0
+Sunset beach with gentle waves,Sunset beach plus tranquil whitecaps,0.7647339
+Supermarket checkout with scanner beeps,Supermarket checkout accompanied by scanner beeps,0.9295105
+Swimming underwater with bubbles,Swimming underwater with bubbles,0.99999994
+Swimming pool with children playing,Swimming pool with children running,0.92915636
+Swing squeaking in playground,Swing squeaking in play space,0.9299224
+Swinging door in western saloon,Swinging door during western saloon,0.9427446
+Symphony orchestra playing classical piece,Symphony orchestra working classical piece,0.9457691
+Table tennis match with ball hits,Table tennis match including ball hits,0.9506331
+Taking photographs with film camera,Taking photographs with film camera,1.0
+Tap dancer on wooden stage,Tap dancer atop wooden stage,0.87349015
+Tap water running into sink,Tap water sprinting into sink,0.88985926
+Tape measure extending and retracting,Tape measure extending and retracting,1.0
+Tea kettle starting to whistle,Tea kettle starting to whistle,1.0
+Tea party with cups clinking,Tea party comprising cups clinking,0.9315679
+Tearing open package or envelope,Tearing open package or envelope,1.0
+Tearing wrapping paper excitedly,Tearing wrapping paper excitedly,1.0
+Telephone ringing in empty office,Telephone tolling during empty headquarters,0.71867555
+Television static noise,Television static noise,1.0
+Tennis ball machine firing balls,Tennis ball machine firing balls,1.0
+Tennis match with grunts and ball hits,Tennis match comprising grunts and ball hits,0.9292482
+Theremin playing eerie melody,Theremin playing eerie melody,1.0
+Ticking analog clock in quiet room,Beating analog timer among silent room,0.7432573
+Ticking bomb in suspense scene,Tocking bomb during suspense scene,0.87901294
+Tidal waves crashing on rocky shore,Tidal billows smashing on rocky shore,0.9276865
+Tiger growling in jungle,Tiger growling during jungle,0.9311468
+Timber being cut at sawmill,Timber being cut at sawmill,1.0
+Time clock punching for work shift,Time timepiece punching for work shift,0.91921234
+Tinkling wind chimes on porch,Tinkling draft chimes on porch,0.92879474
+Tiny music box playing lullaby,Tiny music box operating lullaby,0.95136917
+Tires screeching during emergency stop,Tires screeching in the midst of emergency stop,0.8802782
+Toaster popping up toast,Toaster popping up toast,1.0000001
+Toilet flushing in quiet bathroom,Toilet flushing amid quiet bathroom,0.9164343
+Toll booth with cars stopping,Toll booth comprising cars stopping,0.91290915
+Tools being dropped into metal toolbox,Tools being dropped en route to metal toolbox,0.8828609
+Train crossing railroad tracks,Railway crossing railroad tracks,0.9383596
+Train horn in distance at night,Train horn throughout distance at night,0.91669655
+Train passing through rural crossing,Transit vehicle passing through rural crossing,0.9010892
+Train station announcement over speakers,Railway station announcement over speakers,0.9272413
+Train whistle echoing through valley,Train whistle echoing amid valley,0.9594202
+Tram bell ringing in city street,Tram bell tolling inside metropolitan area boulevard,0.8154379
+Transmission radio static with voice,Transmission radio static together with voice,0.92491305
+Tree branches scraping window in wind,Tree branches scraping window inside wind,0.96119124
+Tree falling in forest with crash,Tree falling during forest including crash,0.9036384
+Tree frogs chorus after rain,Tree frogs chorus later than rain,0.94082165
+Tribal drum circle performance,Tribal drum circle performance,1.0
+Tropical bird calls in jungle,Tropical bird calls in jungle,1.0
+Tropical rainstorm on palm leaves,Tropical rainstorm over palm leaf cover,0.92790806
+Truck backing up with warning beep,Truck backing up together with warning beep,0.9596116
+Trumpet playing reveille at dawn,Trumpet frolicking reveille during dawn,0.8470836
+Tumbling clothes in dryer,Tumbling clothes in dryer,1.0
+Turning pages of newspaper,Turning pages of newspaper,1.0
+TV game show with crowd reactions,TV game show together with multitude reactions,0.8586228
+Typewriter with end-of-line bell,Typewriter plus end-of-line bell,0.9482233
+Typing on computer keyboard,Typing across digital system keyboard,0.81555283
+Typing on old mechanical typewriter,Typing across ancient mechanical typewriter,0.857733
+Underwater bubbles from scuba gear,Underwater bubbles from scuba gear,0.99999994
+Underwater sounds with whale song,Underwater sounds comprising whale song,0.90997463
+University lecture hall before class,University lecture hall before class,1.0
+Urban street corner with traffic,Urban avenue corner comprising automobiles,0.7813107
+Vacuum cleaner running on carpet,Vacuum cleaner running covering carpet,0.94418466
+Velcro fastener being pulled apart,Velcro fastener being pulled apart,1.0
+Venetian gondolier singing on canal,Venetian gondolier singing against canal,0.96903634
+Video arcade with game sounds,Video arcade featuring game sounds,0.9472896
+Video game victory fanfare,Video game victory fanfare,1.0
+Village blacksmith hammering metal,Village blacksmith hammering metal,1.0
+Village church bells on Sunday,Village church bells against Sunday,0.9299414
+Vinyl record being placed on turntable,Vinyl record being placed over turntable,0.9609587
+Vinyl record crackling before music,Vinyl record crackling in advance of music,0.8965363
+Violin being tuned before concert,Violin being tuned in front of concert,0.9060851
+Violin string breaking during play,Violin string breaking throughout play,0.93011355
+Virtual reality game with spatial audio,Virtual reality game alongside spatial audio,0.9363492
+Volcano rumbling before eruption,Volcano rumbling prior to eruption,0.97775936
+Wading through shallow stream,Wading amidst shallow stream,0.8551829
+Walking across wooden bridge,Strolling across wooden bridge,0.83989596
+Walking in deep snow with crunching steps,Ambulating amidst intense snow accompanied by crunching steps,0.73653984
+Walking on autumn leaves,Strolling over autumn leaf cover,0.75225633
+Walking on creaky wooden floor,Stepping over unstable wooden floor,0.7799626
+Walking on gravel path in garden,Marching on gravel path within garden,0.87972283
+Walking through corn field with rustling stalks,Treading throughout corn field comprising rustling stalks,0.84018886
+Walking through heavy rain with umbrella,Walking by way of strong downpour accompanied by umbrella,0.81341445
+Walking through shallow creek,Stepping through shallow creek,0.89888775
+Walking through tall grass meadow,Strolling through tall grass meadow,0.92384315
+Walking up creaky wooden staircase,Stepping up unstable wooden staircase,0.82533574
+Warehouse with forklift operations,Warehouse with forklift operations,1.0
+Washing dishes in kitchen sink,Washing dishes amidst kitchen sink,0.8667346
+Washing machine cycle running,Washing apparatus cycle running,0.9159138
+Water boiling in pot with lid rattling,Water boiling within pot with lid rattling,0.9704719
+Water bubbling in fish tank,Water bubbling in fish tank,1.0
+Water dripping in cave with echoes,Water dripping inside cave with echoes,0.97232604
+Water dripping into bucket slowly,Water dripping bound for bucket slowly,0.9228904
+Water droplets falling on hot surface,Water droplets falling on hot surface,1.0
+Water fountain in quiet garden,Water fountain inside quiet garden,0.92759186
+Water lapping against dock pilings,Water lapping against dock pilings,1.0
+Water pouring from pitcher into glass,Water pouring from pitcher into glass,0.9999998
+Water sprinkler on summer lawn,Water sprinkler against summer lawn,0.9534631
+Waterfall in lush jungle setting,Water drop during lush jungle setting,0.8473164
+Waves crashing during coastal storm,Waves smashing in the midst of coastal storm,0.8570379
+Wedding ceremony with organ music,Wedding ceremony comprising organ music,0.9256954
+Whales breaching ocean surface,Whales breaching ocean surface,1.0
+Whispering in empty cathedral,Whispering in empty cathedral,1.0
+Wind chimes during gentle breeze,Wind chimes for the duration of tranquil breeze,0.83152246
+Wind howling through mountain pass,Zephyr howling throughout mountain pass,0.77971953
+Wind through autumn leaves in park,Wind amid autumn leaves within park,0.9170625
